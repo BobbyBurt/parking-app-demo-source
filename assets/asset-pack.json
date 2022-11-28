@@ -2,11 +2,6 @@
     "section1": {
         "files": [
             {
-                "url": "src/components/Align.js",
-                "type": "script",
-                "key": "Align"
-            },
-            {
                 "url": "src/components/PhysicsBody.js",
                 "type": "script",
                 "key": "PhysicsBody"

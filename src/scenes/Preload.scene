@@ -11,17 +11,53 @@
     },
     "displayList": [
         {
-            "type": "Text",
-            "id": "2ce42443-5227-4c9b-b498-e81f9a21cde3",
-            "label": "progress",
-            "components": [
-                "PreloadText"
-            ],
-            "originX": 0.5,
-            "originY": 0.5,
-            "text": "0%",
-            "fontFamily": "arial",
-            "fontSize": "30px"
+            "type": "Layer",
+            "id": "e61fd5a6-2f1c-4972-8c3a-79c4d0017d89",
+            "label": "mainLayer",
+            "scope": "CLASS",
+            "components": [],
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "2ce42443-5227-4c9b-b498-e81f9a21cde3",
+                    "label": "progress",
+                    "components": [
+                        "PreloadText"
+                    ],
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0%",
+                    "fontFamily": "arial",
+                    "fontSize": "30px"
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "e6d7cf65-b420-4cd0-a543-7b0dca040e9f",
+            "label": "uiLayer",
+            "scope": "CLASS",
+            "components": [],
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "9a72372c-132b-491b-96e9-1372df3ecd92",
+                    "label": "text_1",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.left": true,
+                    "Align.horizontalOffset": 50,
+                    "Align.verticalOffset": -50,
+                    "x": 20,
+                    "y": 220,
+                    "originY": 1,
+                    "text": "Bottom left corner",
+                    "fontFamily": "arial",
+                    "fontSize": "32px"
+                }
+            ]
         }
     ],
     "plainObjects": [],

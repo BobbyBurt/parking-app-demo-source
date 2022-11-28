@@ -49,6 +49,9 @@ class Align extends UserComponent {
 
 	awake()
 	{
+	// test
+		this.scene.cameras
+
 	// add component to scene array
 		if (typeof this.scene.alignGroup === 'undefined')
 		{
