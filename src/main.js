@@ -2,33 +2,22 @@ window.addEventListener('load', function ()
 {
 	var game = new Phaser.Game(
 	{
-		title: 'Tappy Tappy Boneyard',
-		url: 'https://www.newgrounds.com/projects/games/1923225/preview',
+		title: 'Parking App Demo',
+		url: 'https://github.com/BobbyBurt/parking-app-demo-source',
 		version: '0',
 		
 	// visuals
 		type: Phaser.AUTO,
 		backgroundColor: "#FFD3DF",
-		pixelArt: true,
-		roundPixels: true,
+		pixelArt: false,
+		// roundPixels: true,
+			// TODO: do I round pixels?
 		scale: {
 			mode: Phaser.Scale.NONE,
 			width: window.innerWidth * window.devicePixelRatio,
         	height: window.innerHeight * window.devicePixelRatio,
         	zoom: 1 / window.devicePixelRatio
 				// TODO: specify max w/h
-		},
-
-	// physics
-		physics: {
-			default: 'arcade',
-			arcade: {
-				debug: true,
-				gravity: {
-					y: 500,
-					x: 0
-				}
-			}
 		}
 	});
 	
