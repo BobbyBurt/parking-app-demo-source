@@ -26,7 +26,7 @@ class Preload extends Phaser.Scene {
 		const progress = this.add.text(0, 0, "", {});
 		progress.setOrigin(0.5, 0.5);
 		progress.text = "0%";
-		progress.setStyle({ "fontFamily": "nokia cellphone fc small", "fontSize": "30px" });
+		progress.setStyle({ "fontFamily": "arial", "fontSize": "30px" });
 
 		// progress (components)
 		new PreloadText(progress);
@@ -77,14 +77,16 @@ class Preload extends Phaser.Scene {
 		{
 			this.registry.set('mobile', false);
 		}
-	
+
 		if (this.loaded)
 		{
-			this.start();
+			// this.start();
 		}
 	}
 
 	/**
+	 * CURRENTLY DEPRECATED
+	 * 
 	 * loads next scene
 	 */
 	start()

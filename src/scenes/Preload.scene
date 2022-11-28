@@ -20,7 +20,7 @@
             "originX": 0.5,
             "originY": 0.5,
             "text": "0%",
-            "fontFamily": "nokia cellphone fc small",
+            "fontFamily": "arial",
             "fontSize": "30px"
         }
     ],
