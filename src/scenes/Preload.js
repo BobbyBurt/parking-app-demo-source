@@ -25,38 +25,60 @@ class Preload extends Phaser.Scene {
 		// mainLayer
 		const mainLayer = this.add.layer();
 
-		// progress
-		const progress = this.add.text(0, 0, "", {});
-		progress.setOrigin(0.5, 0.5);
-		progress.text = "0%";
-		progress.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
-		mainLayer.add(progress);
-
 		// uiLayer
 		const uiLayer = this.add.layer();
 
-		// text_1
-		const text_1 = this.add.text(20, 220, "", {});
-		text_1.setOrigin(0, 1);
-		text_1.text = "Bottom left corner";
-		text_1.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
-		uiLayer.add(text_1);
+		// bodyCopyText
+		const bodyCopyText = this.add.text(51, 1540, "", {});
+		bodyCopyText.setOrigin(0, 1);
+		bodyCopyText.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum, dolor ac egestas tincidunt, felis magna vehicula nunc, quis lobortis erat arcu vel odio. Vestibulum vestibulum ultrices quam, euismod viverra diam fringilla in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ultricies sem nec mauris aliquet mattis. Duis at dolor posuere, efficitur lacus id, lacinia tellus. Pellentesque quis tristique dui. Vivamus molestie lacus eu dolor eleifend, vel mattis est blandit.";
+		bodyCopyText.setStyle({ "backgroundColor": "#52676cff", "fontFamily": "arial", "fontSize": "64px" });
+		bodyCopyText.setPadding({"left":50,"top":50,"right":50,"bottom":50});
+		bodyCopyText.setWordWrapWidth(1000, true);
+		uiLayer.add(bodyCopyText);
 
-		// progress (components)
-		new PreloadText(progress);
-		const progressAlign = new Align(progress);
-		progressAlign.middle = true;
-		progressAlign.center = true;
+		// alignTest
+		const alignTest = this.add.text(20, 220, "", {});
+		alignTest.setOrigin(0, 1);
+		alignTest.text = "Bottom left corner";
+		alignTest.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
+		uiLayer.add(alignTest);
 
-		// text_1 (components)
-		const text_1Align = new Align(text_1);
-		text_1Align.down = true;
-		text_1Align.left = true;
-		text_1Align.horizontalOffset = 50;
-		text_1Align.verticalOffset = -50;
+		// alignTest_1
+		const alignTest_1 = this.add.text(1095.939697265625, 178.44802856445312, "", {});
+		alignTest_1.setOrigin(1, 0);
+		alignTest_1.text = "Top right";
+		alignTest_1.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
+		uiLayer.add(alignTest_1);
+
+		// progressText
+		const progressText = this.add.text(0, 0, "", {});
+		progressText.setOrigin(0.5, 0.5);
+		progressText.text = "0%";
+		progressText.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
+		uiLayer.add(progressText);
+
+		// alignTest (components)
+		const alignTestAlign = new Align(alignTest);
+		alignTestAlign.down = true;
+		alignTestAlign.left = true;
+
+		// alignTest_1 (components)
+		const alignTest_1Align = new Align(alignTest_1);
+		alignTest_1Align.up = true;
+		alignTest_1Align.right = true;
+
+		// progressText (components)
+		new PreloadText(progressText);
+		const progressTextAlign = new Align(progressText);
+		progressTextAlign.middle = true;
+		progressTextAlign.center = true;
 
 		this.mainLayer = mainLayer;
 		this.uiLayer = uiLayer;
+		this.bodyCopyText = bodyCopyText;
+		this.alignTest = alignTest;
+		this.alignTest_1 = alignTest_1;
 
 		this.events.emit("scene-awake");
 	}
@@ -65,15 +87,21 @@ class Preload extends Phaser.Scene {
 	mainLayer;
 	/** @type {Phaser.GameObjects.Layer} */
 	uiLayer;
+	/** @type {Phaser.GameObjects.Text} */
+	bodyCopyText;
+	/** @type {Phaser.GameObjects.Text} */
+	alignTest;
+	/** @type {Phaser.GameObjects.Text} */
+	alignTest_1;
 
 	/* START-USER-CODE */
 
-	loaded = false
+	loaded = false;
 
 	preload()
 	{
 		this.editorCreate();
-		
+
 		this.editorPreload();
 
 		this.initCameras();
@@ -93,6 +121,10 @@ class Preload extends Phaser.Scene {
 		{
 			this.loaded = true;
 		});
+	}
+
+	create()
+	{
 	}
 
 	/** 
@@ -149,6 +181,9 @@ class Preload extends Phaser.Scene {
 		this.UICam = this.cameras.add(0, 0, this.cameras.main.width, this.cameras.main.height);
 		this.UICam.setName('UICam');
 		this.UICam.ignore(this.mainLayer.getChildren());
+		this.UICam.preRender(1);
+			// Must prerender for Align component to have up-to-date scale data for initial 
+			// adjustment.
 
 	// // debug: distinguish cameras
 	// 	if (this.registry.get('debug'))
@@ -160,14 +195,7 @@ class Preload extends Phaser.Scene {
 
 	resize()
 	{
-	// call align component
-		if (typeof this.alignGroup !== 'undefined')
-		{
-			for (let i = 0; i < this.alignGroup.length; i++)
-			{
-				this.alignGroup[i].align(this.UICam.worldView);
-			}
-		}
+
 	}
 
 	/* END-USER-CODE */
