@@ -29,7 +29,7 @@ class Preload extends Phaser.Scene {
 		const progress = this.add.text(0, 0, "", {});
 		progress.setOrigin(0.5, 0.5);
 		progress.text = "0%";
-		progress.setStyle({ "fontFamily": "arial", "fontSize": "30px" });
+		progress.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
 		mainLayer.add(progress);
 
 		// uiLayer
@@ -39,11 +39,14 @@ class Preload extends Phaser.Scene {
 		const text_1 = this.add.text(20, 220, "", {});
 		text_1.setOrigin(0, 1);
 		text_1.text = "Bottom left corner";
-		text_1.setStyle({ "fontFamily": "arial", "fontSize": "32px" });
+		text_1.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
 		uiLayer.add(text_1);
 
 		// progress (components)
 		new PreloadText(progress);
+		const progressAlign = new Align(progress);
+		progressAlign.middle = true;
+		progressAlign.center = true;
 
 		// text_1 (components)
 		const text_1Align = new Align(text_1);
@@ -70,7 +73,7 @@ class Preload extends Phaser.Scene {
 	preload()
 	{
 		this.editorCreate();
-
+		
 		this.editorPreload();
 
 		this.initCameras();
@@ -140,12 +143,12 @@ class Preload extends Phaser.Scene {
 	{
 	// main
 		this.cameras.main.ignore(this.uiLayer.getChildren());
-		this.cameras.main.centerOn(0, 0);
-		
+		this.cameras.main.setName('main');
+
 	// UI
 		this.UICam = this.cameras.add(0, 0, this.cameras.main.width, this.cameras.main.height);
+		this.UICam.setName('UICam');
 		this.UICam.ignore(this.mainLayer.getChildren());
-		this.UICam.centerOn(0, 0);
 
 	// // debug: distinguish cameras
 	// 	if (this.registry.get('debug'))
@@ -157,8 +160,14 @@ class Preload extends Phaser.Scene {
 
 	resize()
 	{
-		this.cameras.main.centerOn(0, 0);
-		this.UICam.centerOn(0, 0);
+	// call align component
+		if (typeof this.alignGroup !== 'undefined')
+		{
+			for (let i = 0; i < this.alignGroup.length; i++)
+			{
+				this.alignGroup[i].align(this.UICam.worldView);
+			}
+		}
 	}
 
 	/* END-USER-CODE */

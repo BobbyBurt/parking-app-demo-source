@@ -8,7 +8,7 @@ window.addEventListener('load', function ()
 		
 	// visuals
 		type: Phaser.AUTO,
-		backgroundColor: "#FFD3DF",
+		backgroundColor: "#000000",
 		pixelArt: false,
 		// roundPixels: true,
 			// TODO: do I round pixels?

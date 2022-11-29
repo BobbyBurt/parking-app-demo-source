@@ -7,7 +7,9 @@
             "starter-template-basic-typescript/assets/asset-pack.json"
         ],
         "createMethodName": "editorCreate",
-        "sceneKey": "Preload"
+        "sceneKey": "Preload",
+        "borderWidth": 1170,
+        "borderHeight": 2532
     },
     "displayList": [
         {
@@ -22,13 +24,16 @@
                     "id": "2ce42443-5227-4c9b-b498-e81f9a21cde3",
                     "label": "progress",
                     "components": [
-                        "PreloadText"
+                        "PreloadText",
+                        "Align"
                     ],
+                    "Align.middle": true,
+                    "Align.center": true,
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "0%",
                     "fontFamily": "arial",
-                    "fontSize": "30px"
+                    "fontSize": "64px"
                 }
             ]
         },
@@ -55,7 +60,7 @@
                     "originY": 1,
                     "text": "Bottom left corner",
                     "fontFamily": "arial",
-                    "fontSize": "32px"
+                    "fontSize": "64px"
                 }
             ]
         }

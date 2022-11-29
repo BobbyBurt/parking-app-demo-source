@@ -18,6 +18,8 @@ class Align extends UserComponent {
 
 		this.scene = this.gameObject.scene;
 
+		this.UICam;
+
 		/* END-USER-CTR-CODE */
 	}
 
@@ -49,9 +51,6 @@ class Align extends UserComponent {
 
 	awake()
 	{
-	// test
-		this.scene.cameras
-
 	// add component to scene array
 		if (typeof this.scene.alignGroup === 'undefined')
 		{
@@ -60,18 +59,20 @@ class Align extends UserComponent {
 		}
 		this.scene.alignGroup.push(this);
 		// this.scene.alignGroup.add(this);
+	}
 
-	// set scroll factor
-		if (this.left || this.center || this.right)
-		{
-			// this.gameObject.setScrollFactor(0);
-		}
-		if (this.up || this.middle || this.down)
-		{
-			// this.gameObject.scrollFactorY = 0;
-		}
-			// TODO: 0 scrollfactor breaks this whole thing.
-			// I dealt with this before, but I don't recall my solution
+	start()
+	{
+	// UICam access
+		this.UICam = this.scene.cameras.getCamera('UICam');
+
+		this.observer = new Observer();
+		this.observer.addObserver(this.observerTest)
+	}
+
+	observerTest(data)
+	{
+		console.log('I observe: ' + data);
 	}
 
 	destroy()
