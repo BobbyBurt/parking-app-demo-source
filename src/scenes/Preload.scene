@@ -18,11 +18,60 @@
             "label": "mainLayer",
             "scope": "CLASS",
             "components": [],
+            "list": []
+        },
+        {
+            "type": "Layer",
+            "id": "e6d7cf65-b420-4cd0-a543-7b0dca040e9f",
+            "label": "uiLayer",
+            "scope": "CLASS",
+            "components": [],
             "list": [
                 {
                     "type": "Text",
+                    "id": "b70d1f77-4b54-4a1b-a024-bee01787fed1",
+                    "label": "dialogueText",
+                    "scope": "CLASS",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.eventToEmit": "textButton",
+                    "x": 576,
+                    "y": 1245,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "This is a dialogue box. In the final app, it will guide the user through the app as a solution, as well as explain the problem, etc. It's a gameobject that can be made to appear by code, and disappears on pointer down.",
+                    "paddingLeft": 50,
+                    "paddingTop": 50,
+                    "paddingRight": 50,
+                    "paddingBottom": 50,
+                    "fontFamily": "arial",
+                    "fontSize": "64px",
+                    "backgroundColor": "#52676cff",
+                    "wordWrapWidth": 1000,
+                    "wordWrapUseAdvanced": true
+                },
+                {
+                    "type": "Text",
+                    "id": "9a72372c-132b-491b-96e9-1372df3ecd92",
+                    "label": "alignTest",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.left": true,
+                    "x": 20,
+                    "y": 220,
+                    "originY": 1,
+                    "text": "Bottom left corner",
+                    "fontFamily": "arial",
+                    "fontSize": "64px"
+                },
+                {
+                    "type": "Text",
                     "id": "2ce42443-5227-4c9b-b498-e81f9a21cde3",
-                    "label": "progress",
+                    "label": "progressText",
                     "components": [
                         "PreloadText",
                         "Align"
@@ -34,33 +83,61 @@
                     "text": "0%",
                     "fontFamily": "arial",
                     "fontSize": "64px"
-                }
-            ]
-        },
-        {
-            "type": "Layer",
-            "id": "e6d7cf65-b420-4cd0-a543-7b0dca040e9f",
-            "label": "uiLayer",
-            "scope": "CLASS",
-            "components": [],
-            "list": [
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "cf2dc3fc-0d5b-4026-9ada-89a950a7e052",
+                    "label": "buttonTest",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align",
+                        "Button"
+                    ],
+                    "Align.up": true,
+                    "Align.right": true,
+                    "Align.horizontalOffset": -10,
+                    "Align.verticalOffset": 10,
+                    "Button.eventToEmit": "buttonTest2",
+                    "x": 1101,
+                    "y": 62,
+                    "scaleX": 2.8312995377072916,
+                    "scaleY": 1.837431407936295,
+                    "originX": 1,
+                    "originY": 0,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Image",
+                    "id": "7ede76d8-ddfc-4121-a691-460996414e4c",
+                    "label": "button",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.eventToEmit": "showDialogue",
+                    "texture": {
+                        "key": "button"
+                    },
+                    "x": 500,
+                    "y": 125,
+                    "scaleX": 2,
+                    "scaleY": 2
+                },
                 {
                     "type": "Text",
-                    "id": "9a72372c-132b-491b-96e9-1372df3ecd92",
-                    "label": "text_1",
-                    "components": [
-                        "Align"
-                    ],
-                    "Align.down": true,
-                    "Align.left": true,
-                    "Align.horizontalOffset": 50,
-                    "Align.verticalOffset": -50,
-                    "x": 20,
-                    "y": 220,
-                    "originY": 1,
-                    "text": "Bottom left corner",
+                    "id": "9b0bcc17-b3d8-4ef3-b371-815e76eef6b6",
+                    "label": "buttonText",
+                    "components": [],
+                    "x": 500,
+                    "y": 123,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Show text",
+                    "align": "center",
                     "fontFamily": "arial",
-                    "fontSize": "64px"
+                    "fontSize": "64px",
+                    "color": "#000000ff"
                 }
             ]
         }

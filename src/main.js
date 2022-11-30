@@ -10,6 +10,7 @@ window.addEventListener('load', function ()
 		type: Phaser.AUTO,
 		backgroundColor: "#000000",
 		pixelArt: false,
+		antialias: true,
 		// roundPixels: true,
 			// TODO: do I round pixels?
 		scale: {
@@ -54,26 +55,40 @@ class Boot extends Phaser.Scene
 	 */
 	resize()
 	{
+	// manually resize the game with the Phaser 3.16 scalemanager
 		let w = window.innerWidth * window.devicePixelRatio;
 		let h = window.innerHeight * window.devicePixelRatio;
-
 		this.scale.resize(w, h);
-			// manually resize the game with the Phaser 3.16 scalemanager
 
+	// for each scene: scale main camera viewport, call resize()
 		for (let scene of this.scene.manager.scenes)
 		{	
 			if (scene.scene.settings.active)
 			{
-			// scale the camera
 				scene.cameras.main.setViewport(0, 0, w, h);
+
+			// prerender UICam so that scale is up to date
+				this.uiCam = scene.cameras.getCamera('UICam');
+				console.log(this.uiCam);
+				if (this.uiCam)
+				{
+					this.uiCam.preRender(1);
+				}
 
 				if (scene.resize)
 				{
 					scene.resize();
-						// scale/position stuff in the scene itself with this method, 
-						// that the scene must implement.
+						// Scale/position stuff in the scene itself with this method that the 
+						// scene must implement.
 				}
 			}
 		}
+
+	// emit resize event
+		this.scene.manager.getScenes(true)[0].events.emit('resize');
+			// Emits from first active scene, whichever it is, since this boot scene will be gone.
+			// Secondary event that components can observe without dependency on the scene.
+			// I use my own event knowing it will be called after the window event listener, and
+			// thus the scale data is up to date.
 	}
 }

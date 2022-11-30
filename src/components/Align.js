@@ -1,4 +1,4 @@
- 
+
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -17,8 +17,6 @@ class Align extends UserComponent {
 		/* START-USER-CTR-CODE */
 
 		this.scene = this.gameObject.scene;
-
-		this.UICam;
 
 		/* END-USER-CTR-CODE */
 	}
@@ -51,66 +49,55 @@ class Align extends UserComponent {
 
 	awake()
 	{
-	// add component to scene array
-		if (typeof this.scene.alignGroup === 'undefined')
-		{
-			this.scene.alignGroup = [];
-			// this.scene.alignGroup = this.scene.add.group();
-		}
-		this.scene.alignGroup.push(this);
-		// this.scene.alignGroup.add(this);
+
 	}
 
 	start()
 	{
-	// UICam access
-		this.UICam = this.scene.cameras.getCamera('UICam');
+		this.scene.events.on('resize', this.align, this);
 
-		this.observer = new Observer();
-		this.observer.addObserver(this.observerTest)
-	}
-
-	observerTest(data)
-	{
-		console.log('I observe: ' + data);
+		this.align();
 	}
 
 	destroy()
 	{
-		//	TODO: this needs to be removed from scene array on destroy
-		//	possible solution:
-		//	https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array
+		this.scene.events.off('resize', this.align, this);
 	}
 
 	/**
 	 * 
-	 * @param {Phaser.Cameras.worldView} worldView pass in worldview of camera
 	 */
-	align(worldView)
+	align()
 	{
+		this.worldView = this.scene.cameras.getCamera('UICam').worldView;
+
+	// // TEST
+	// 	console.log('aligning');
+	// 	console.log(this.UICam);
+
 		if (this.up)
 		{
-			this.gameObject.setY(worldView.top + this.verticalOffset);
+			this.gameObject.setY(this.worldView.top + this.verticalOffset);
 		}
 		if (this.middle)
 		{
-			this.gameObject.setY(worldView.centerY + this.verticalOffset);
+			this.gameObject.setY(this.worldView.centerY + this.verticalOffset);
 		}
 		if (this.down)
 		{
-			this.gameObject.setY(worldView.bottom + this.verticalOffset);
+			this.gameObject.setY(this.worldView.bottom + this.verticalOffset);
 		}
 		if (this.left)
 		{
-			this.gameObject.setX(worldView.left + this.horizontalOffset);
+			this.gameObject.setX(this.worldView.left + this.horizontalOffset);
 		}
 		if (this.center)
 		{
-			this.gameObject.setX(worldView.centerX + this.horizontalOffset);
+			this.gameObject.setX(this.worldView.centerX + this.horizontalOffset);
 		}
 		if (this.right)
 		{
-			this.gameObject.setX(worldView.right + this.horizontalOffset);
+			this.gameObject.setX(this.worldView.right + this.horizontalOffset);
 		}
 	}
 

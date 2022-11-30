@@ -5,6 +5,28 @@
                 "url": "src/components/Align.js",
                 "type": "script",
                 "key": "Align"
+            },
+            {
+                "url": "assets/button.png",
+                "type": "image",
+                "key": "button"
+            },
+            {
+                "url": "src/components/Button.js",
+                "type": "script",
+                "key": "Button"
+            },
+            {
+                "url": "assets/buttonOver.png",
+                "type": "image",
+                "key": "buttonOver"
+            },
+            {
+                "url": [
+                    "assets/sfx/SMB-select-tick.wav"
+                ],
+                "type": "audio",
+                "key": "select"
             }
         ]
     },
