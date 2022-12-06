@@ -36,12 +36,36 @@
                             "x": 784,
                             "y": 1401,
                             "scaleX": 4.567640778523811,
+                            "scaleY": 4.567640778523811
+                        },
+                        {
+                            "type": "Image",
+                            "id": "eede877a-dec6-4926-b1fc-a4df9f65eede",
+                            "label": "occupancyHeatmap",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "heatmap-temp-1"
+                            },
+                            "x": 784,
+                            "y": 1401,
+                            "scaleX": 4.567640778523811,
+                            "scaleY": 4.567640778523811
+                        },
+                        {
+                            "type": "Image",
+                            "id": "c1d26253-890c-45f1-beec-9c7b21951147",
+                            "label": "turnoverHeatmap",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "heatmap-temp-2"
+                            },
+                            "x": 784,
+                            "y": 1401,
+                            "scaleX": 4.567640778523811,
                             "scaleY": 4.567640778523811,
-                            "alpha": 0.4,
-                            "alphaTopLeft": 0.4,
-                            "alphaTopRight": 0.4,
-                            "alphaBottomLeft": 0.4,
-                            "alphaBottomRight": 0.4
+                            "visible": false
                         },
                         {
                             "type": "Polygon",
@@ -53,6 +77,7 @@
                             "x": 579,
                             "y": 584,
                             "isFilled": true,
+                            "fillColor": "#f1eb6a",
                             "points": "-104.7876519667015 391.5391632256992 238.16718935698958 283.76400946988 385.9383326189543 34.29731145142708 546.9859399499417 104.97420649501294 573.1438341196051 267.5103910176194 419.3449142564517 437.7845628766732 -100.83685264730366 555.5133876523623"
                         }
                     ]
@@ -66,6 +91,26 @@
             "scope": "CLASS",
             "components": [],
             "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "26e92fef-bc6e-4761-95d4-00c6d70aef74",
+                    "label": "bottomBar",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.up": true,
+                    "Align.down": true,
+                    "Align.center": true,
+                    "x": 605,
+                    "y": 2546,
+                    "scaleX": 30,
+                    "scaleY": 1.3916874920778723,
+                    "originY": 1,
+                    "isFilled": true,
+                    "fillColor": "#2e2e2e",
+                    "width": 128,
+                    "height": 128
+                },
                 {
                     "type": "Text",
                     "id": "b70d1f77-4b54-4a1b-a024-bee01787fed1",
@@ -91,43 +136,25 @@
                     "wordWrapUseAdvanced": true
                 },
                 {
-                    "type": "Text",
-                    "id": "9a72372c-132b-491b-96e9-1372df3ecd92",
-                    "label": "alignTest",
-                    "scope": "CLASS",
-                    "components": [
-                        "Align"
-                    ],
-                    "Align.down": true,
-                    "Align.left": true,
-                    "x": 20,
-                    "y": 220,
-                    "originY": 1,
-                    "text": "Bottom left corner",
-                    "fontFamily": "arial",
-                    "fontSize": "64px"
-                },
-                {
                     "type": "Rectangle",
                     "id": "cf2dc3fc-0d5b-4026-9ada-89a950a7e052",
-                    "label": "buttonTest",
+                    "label": "turnoverViewButton",
                     "scope": "CLASS",
                     "components": [
-                        "Align",
-                        "Button"
+                        "Button",
+                        "Align"
                     ],
-                    "Align.up": true,
-                    "Align.right": true,
-                    "Align.horizontalOffset": -10,
-                    "Align.verticalOffset": 10,
-                    "Button.eventToEmit": "buttonTest2",
-                    "x": 1101,
-                    "y": 62,
-                    "scaleX": 2.8312995377072916,
-                    "scaleY": 1.837431407936295,
-                    "originX": 1,
-                    "originY": 0,
+                    "Button.eventToEmit": "turnoverView",
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.horizontalOffset": -300,
+                    "x": 290,
+                    "y": 2540,
+                    "scaleX": 2.0471239809434234,
+                    "scaleY": 1.2020153222993333,
+                    "originY": 1,
                     "isFilled": true,
+                    "fillColor": "#4e4e4e",
                     "width": 128,
                     "height": 128
                 },
@@ -142,8 +169,8 @@
                     "texture": {
                         "key": "button"
                     },
-                    "x": 500,
-                    "y": 125,
+                    "x": 298,
+                    "y": 417,
                     "scaleX": 2,
                     "scaleY": 2
                 },
@@ -152,8 +179,8 @@
                     "id": "9b0bcc17-b3d8-4ef3-b371-815e76eef6b6",
                     "label": "buttonText",
                     "components": [],
-                    "x": 500,
-                    "y": 123,
+                    "x": 298,
+                    "y": 415,
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Show text",
@@ -161,6 +188,86 @@
                     "fontFamily": "arial",
                     "fontSize": "64px",
                     "color": "#000000ff"
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "999c35f9-37e6-48a7-a8c1-06e3a7f9dcbf",
+                    "label": "topBar",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.up": true,
+                    "Align.center": true,
+                    "scaleX": 30,
+                    "scaleY": 1.3916874920778723,
+                    "originY": 0,
+                    "isFilled": true,
+                    "fillColor": "#2e2e2e",
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Image",
+                    "id": "14f4cb7d-72c3-4c1f-bb76-3cc17a147e05",
+                    "label": "spottrLogo",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.up": true,
+                    "Align.center": true,
+                    "Align.verticalOffset": 90,
+                    "texture": {
+                        "key": "Spottr-logo"
+                    },
+                    "x": 543,
+                    "y": 87,
+                    "scaleX": 0.5372422073766504,
+                    "scaleY": 0.5372422073766504
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "05498bb5-abd7-4a8f-9111-4cae6708b55e",
+                    "label": "occupancyViewButton_1",
+                    "scope": "CLASS",
+                    "components": [
+                        "Button",
+                        "Align"
+                    ],
+                    "Button.eventToEmit": "occupancyView",
+                    "Align.down": true,
+                    "Align.center": true,
+                    "x": 614,
+                    "y": 2534,
+                    "scaleX": 2.0471239809434234,
+                    "scaleY": 1.2020153222993333,
+                    "originY": 1,
+                    "isFilled": true,
+                    "fillColor": "#4e4e4e",
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "b538c427-5b14-4a7b-8a42-1e0134bfca4e",
+                    "label": "lotViewButton",
+                    "scope": "CLASS",
+                    "components": [
+                        "Button",
+                        "Align"
+                    ],
+                    "Button.eventToEmit": "lotView",
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.horizontalOffset": 300,
+                    "x": 913,
+                    "y": 2530,
+                    "scaleX": 2.0471239809434234,
+                    "scaleY": 1.2020153222993333,
+                    "originY": 1,
+                    "isFilled": true,
+                    "fillColor": "#4e4e4e",
+                    "width": 128,
+                    "height": 128
                 }
             ]
         }

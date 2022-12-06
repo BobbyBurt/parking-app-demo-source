@@ -27,20 +27,38 @@ class Map extends Phaser.Scene {
 		const mapTemp = this.add.image(784, 1401, "map-temp");
 		mapTemp.scaleX = 4.567640778523811;
 		mapTemp.scaleY = 4.567640778523811;
-		mapTemp.alpha = 0.4;
-		mapTemp.alphaTopLeft = 0.4;
-		mapTemp.alphaTopRight = 0.4;
-		mapTemp.alphaBottomLeft = 0.4;
-		mapTemp.alphaBottomRight = 0.4;
 		mapContainer.add(mapTemp);
+
+		// occupancyHeatmap
+		const occupancyHeatmap = this.add.image(784, 1401, "heatmap-temp-1");
+		occupancyHeatmap.scaleX = 4.567640778523811;
+		occupancyHeatmap.scaleY = 4.567640778523811;
+		mapContainer.add(occupancyHeatmap);
+
+		// turnoverHeatmap
+		const turnoverHeatmap = this.add.image(784, 1401, "heatmap-temp-2");
+		turnoverHeatmap.scaleX = 4.567640778523811;
+		turnoverHeatmap.scaleY = 4.567640778523811;
+		turnoverHeatmap.visible = false;
+		mapContainer.add(turnoverHeatmap);
 
 		// lotTest
 		const lotTest = this.add.polygon(579, 584, "-104.7876519667015 391.5391632256992 238.16718935698958 283.76400946988 385.9383326189543 34.29731145142708 546.9859399499417 104.97420649501294 573.1438341196051 267.5103910176194 419.3449142564517 437.7845628766732 -100.83685264730366 555.5133876523623");
 		lotTest.isFilled = true;
+		lotTest.fillColor = 15854442;
 		mapContainer.add(lotTest);
 
 		// uiLayer
 		const uiLayer = this.add.layer();
+
+		// bottomBar
+		const bottomBar = this.add.rectangle(605, 2546, 128, 128);
+		bottomBar.scaleX = 30;
+		bottomBar.scaleY = 1.3916874920778723;
+		bottomBar.setOrigin(0.5, 1);
+		bottomBar.isFilled = true;
+		bottomBar.fillColor = 3026478;
+		uiLayer.add(bottomBar);
 
 		// dialogueText
 		const dialogueText = this.add.text(576, 1245, "", {});
@@ -51,33 +69,60 @@ class Map extends Phaser.Scene {
 		dialogueText.setWordWrapWidth(1000, true);
 		uiLayer.add(dialogueText);
 
-		// alignTest
-		const alignTest = this.add.text(20, 220, "", {});
-		alignTest.setOrigin(0, 1);
-		alignTest.text = "Bottom left corner";
-		alignTest.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
-		uiLayer.add(alignTest);
-
-		// buttonTest
-		const buttonTest = this.add.rectangle(1101, 62, 128, 128);
-		buttonTest.scaleX = 2.8312995377072916;
-		buttonTest.scaleY = 1.837431407936295;
-		buttonTest.setOrigin(1, 0);
-		buttonTest.isFilled = true;
-		uiLayer.add(buttonTest);
+		// turnoverViewButton
+		const turnoverViewButton = this.add.rectangle(290, 2540, 128, 128);
+		turnoverViewButton.scaleX = 2.0471239809434234;
+		turnoverViewButton.scaleY = 1.2020153222993333;
+		turnoverViewButton.setOrigin(0.5, 1);
+		turnoverViewButton.isFilled = true;
+		turnoverViewButton.fillColor = 5131854;
+		uiLayer.add(turnoverViewButton);
 
 		// button
-		const button = this.add.image(500, 125, "button");
+		const button = this.add.image(298, 417, "button");
 		button.scaleX = 2;
 		button.scaleY = 2;
 		uiLayer.add(button);
 
 		// buttonText
-		const buttonText = this.add.text(500, 123, "", {});
+		const buttonText = this.add.text(298, 415, "", {});
 		buttonText.setOrigin(0.5, 0.5);
 		buttonText.text = "Show text";
 		buttonText.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "arial", "fontSize": "64px" });
 		uiLayer.add(buttonText);
+
+		// topBar
+		const topBar = this.add.rectangle(0, 0, 128, 128);
+		topBar.scaleX = 30;
+		topBar.scaleY = 1.3916874920778723;
+		topBar.setOrigin(0.5, 0);
+		topBar.isFilled = true;
+		topBar.fillColor = 3026478;
+		uiLayer.add(topBar);
+
+		// spottrLogo
+		const spottrLogo = this.add.image(543, 87, "Spottr-logo");
+		spottrLogo.scaleX = 0.5372422073766504;
+		spottrLogo.scaleY = 0.5372422073766504;
+		uiLayer.add(spottrLogo);
+
+		// occupancyViewButton_1
+		const occupancyViewButton_1 = this.add.rectangle(614, 2534, 128, 128);
+		occupancyViewButton_1.scaleX = 2.0471239809434234;
+		occupancyViewButton_1.scaleY = 1.2020153222993333;
+		occupancyViewButton_1.setOrigin(0.5, 1);
+		occupancyViewButton_1.isFilled = true;
+		occupancyViewButton_1.fillColor = 5131854;
+		uiLayer.add(occupancyViewButton_1);
+
+		// lotViewButton
+		const lotViewButton = this.add.rectangle(913, 2530, 128, 128);
+		lotViewButton.scaleX = 2.0471239809434234;
+		lotViewButton.scaleY = 1.2020153222993333;
+		lotViewButton.setOrigin(0.5, 1);
+		lotViewButton.isFilled = true;
+		lotViewButton.fillColor = 5131854;
+		uiLayer.add(lotViewButton);
 
 		// mapContainer (components)
 		new MapDrag(mapContainer);
@@ -85,49 +130,89 @@ class Map extends Phaser.Scene {
 		// lotTest (components)
 		new ParkingLot(lotTest);
 
+		// bottomBar (components)
+		const bottomBarAlign = new Align(bottomBar);
+		bottomBarAlign.up = true;
+		bottomBarAlign.down = true;
+		bottomBarAlign.center = true;
+
 		// dialogueText (components)
 		const dialogueTextButton = new Button(dialogueText);
 		dialogueTextButton.eventToEmit = "textButton";
 
-		// alignTest (components)
-		const alignTestAlign = new Align(alignTest);
-		alignTestAlign.down = true;
-		alignTestAlign.left = true;
-
-		// buttonTest (components)
-		const buttonTestAlign = new Align(buttonTest);
-		buttonTestAlign.up = true;
-		buttonTestAlign.right = true;
-		buttonTestAlign.horizontalOffset = -10;
-		buttonTestAlign.verticalOffset = 10;
-		const buttonTestButton = new Button(buttonTest);
-		buttonTestButton.eventToEmit = "buttonTest2";
+		// turnoverViewButton (components)
+		const turnoverViewButtonButton = new Button(turnoverViewButton);
+		turnoverViewButtonButton.eventToEmit = "turnoverView";
+		const turnoverViewButtonAlign = new Align(turnoverViewButton);
+		turnoverViewButtonAlign.down = true;
+		turnoverViewButtonAlign.center = true;
+		turnoverViewButtonAlign.horizontalOffset = -300;
 
 		// button (components)
 		const buttonButton = new Button(button);
 		buttonButton.eventToEmit = "showDialogue";
 
+		// topBar (components)
+		const topBarAlign = new Align(topBar);
+		topBarAlign.up = true;
+		topBarAlign.center = true;
+
+		// spottrLogo (components)
+		const spottrLogoAlign = new Align(spottrLogo);
+		spottrLogoAlign.up = true;
+		spottrLogoAlign.center = true;
+		spottrLogoAlign.verticalOffset = 90;
+
+		// occupancyViewButton_1 (components)
+		const occupancyViewButton_1Button = new Button(occupancyViewButton_1);
+		occupancyViewButton_1Button.eventToEmit = "occupancyView";
+		const occupancyViewButton_1Align = new Align(occupancyViewButton_1);
+		occupancyViewButton_1Align.down = true;
+		occupancyViewButton_1Align.center = true;
+
+		// lotViewButton (components)
+		const lotViewButtonButton = new Button(lotViewButton);
+		lotViewButtonButton.eventToEmit = "lotView";
+		const lotViewButtonAlign = new Align(lotViewButton);
+		lotViewButtonAlign.down = true;
+		lotViewButtonAlign.center = true;
+		lotViewButtonAlign.horizontalOffset = 300;
+
 		this.mainLayer = mainLayer;
+		this.occupancyHeatmap = occupancyHeatmap;
+		this.turnoverHeatmap = turnoverHeatmap;
 		this.uiLayer = uiLayer;
 		this.dialogueText = dialogueText;
-		this.alignTest = alignTest;
-		this.buttonTest = buttonTest;
+		this.turnoverViewButton = turnoverViewButton;
+		this.occupancyViewButton_1 = occupancyViewButton_1;
+		this.lotViewButton = lotViewButton;
 
 		this.events.emit("scene-awake");
 	}
 
 	/** @type {Phaser.GameObjects.Layer} */
 	mainLayer;
+	/** @type {Phaser.GameObjects.Image} */
+	occupancyHeatmap;
+	/** @type {Phaser.GameObjects.Image} */
+	turnoverHeatmap;
 	/** @type {Phaser.GameObjects.Layer} */
 	uiLayer;
 	/** @type {Phaser.GameObjects.Text} */
 	dialogueText;
-	/** @type {Phaser.GameObjects.Text} */
-	alignTest;
 	/** @type {Phaser.GameObjects.Rectangle} */
-	buttonTest;
+	turnoverViewButton;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	occupancyViewButton_1;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	lotViewButton;
 
 	/* START-USER-CODE */
+
+	/**
+	 * 'occupancy' 'turnover' or 'lot'
+	 */
+	mapView = 'occupancy'
 
 	preload()
 	{
@@ -152,6 +237,21 @@ class Map extends Phaser.Scene {
 		this.events.on('textButton', function ()
 		{
 			_this.hideDialogue();
+		});
+
+		this.events.on('occupancyView', function ()
+		{
+			_this.setOccupancyView();
+		});
+
+		this.events.on('turnoverView', function ()
+		{
+			_this.setTurnoverView();
+		});
+
+		this.events.on('lotView', function ()
+		{
+			_this.setLotView();
 		});
 
 	// SFX
@@ -192,6 +292,45 @@ class Map extends Phaser.Scene {
 
 		// Starting the appear tween before the disappear tween completes should be avoided. If
 		// this is a possible edgecase in how show/hideDialogue are implimented I will fix it.
+	}
+
+	setOccupancyView()
+	{
+		if (this.mapView == 'occupancy')
+		{
+			return;
+		}
+		this.mapView = 'occupancy'
+
+		this.occupancyHeatmap.visible = true;
+		this.turnoverHeatmap.visible = false;
+		// hide lots
+	}
+
+	setTurnoverView()
+	{
+		if (this.mapView == 'turnover')
+		{
+			return;
+		}
+		this.mapView = 'turnover'
+
+		this.turnoverHeatmap.visible = true;
+		this.occupancyHeatmap.visible = false;
+		// hide lots
+	}
+
+	setTurnoverView()
+	{
+		if (this.mapView == 'lot')
+		{
+			return;
+		}
+		this.mapView = 'lot'
+
+		// show lots
+		this.turnoverHeatmap.visible = false;
+		this.occupancyHeatmap.visible = false;
 	}
 
 	/**

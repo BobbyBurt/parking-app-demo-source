@@ -7,6 +7,16 @@
                 "key": "button"
             },
             {
+                "url": "assets/heatmap-temp-1.png",
+                "type": "image",
+                "key": "heatmap-temp-1"
+            },
+            {
+                "url": "assets/heatmap-temp-2.png",
+                "type": "image",
+                "key": "heatmap-temp-2"
+            },
+            {
                 "url": "assets/map-temp.png",
                 "type": "image",
                 "key": "map-temp"
