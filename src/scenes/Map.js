@@ -14,12 +14,6 @@ class Map extends Phaser.Scene {
 	}
 
 	/** @returns {void} */
-	editorPreload() {
-
-		this.load.pack("preload-asset-pack", "assets/preload-asset-pack.json");
-	}
-
-	/** @returns {void} */
 	editorCreate() {
 
 		// mainLayer
@@ -43,13 +37,6 @@ class Map extends Phaser.Scene {
 		alignTest.text = "Bottom left corner";
 		alignTest.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
 		uiLayer.add(alignTest);
-
-		// progressText
-		const progressText = this.add.text(0, 0, "", {});
-		progressText.setOrigin(0.5, 0.5);
-		progressText.text = "0%";
-		progressText.setStyle({ "fontFamily": "arial", "fontSize": "64px" });
-		uiLayer.add(progressText);
 
 		// buttonTest
 		const buttonTest = this.add.rectangle(1101, 62, 128, 128);
@@ -85,12 +72,6 @@ class Map extends Phaser.Scene {
 		const alignTestAlign = new Align(alignTest);
 		alignTestAlign.down = true;
 		alignTestAlign.left = true;
-
-		// progressText (components)
-		new PreloadText(progressText);
-		const progressTextAlign = new Align(progressText);
-		progressTextAlign.middle = true;
-		progressTextAlign.center = true;
 
 		// buttonTest (components)
 		const buttonTestAlign = new Align(buttonTest);

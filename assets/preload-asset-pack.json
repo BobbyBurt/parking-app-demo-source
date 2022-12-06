@@ -7,31 +7,14 @@
                 "key": "Align"
             },
             {
-                "url": "assets/button.png",
-                "type": "image",
-                "key": "button"
-            },
-            {
                 "url": "src/components/Button.js",
                 "type": "script",
                 "key": "Button"
             },
             {
-                "url": "assets/buttonOver.png",
-                "type": "image",
-                "key": "buttonOver"
-            },
-            {
                 "url": "src/components/ParkingLot.js",
                 "type": "script",
                 "key": "ParkingLot"
-            },
-            {
-                "url": [
-                    "assets/sfx/SMB-select-tick.wav"
-                ],
-                "type": "audio",
-                "key": "select"
             },
             {
                 "url": "assets/Spottr-logo.png",

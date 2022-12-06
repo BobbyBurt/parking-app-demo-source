@@ -8,4 +8,4 @@ Design Research - GDES307
 Aaron Burt - n01428950
 
 ### TODO
-- [ ] components are being declared multiple times
+- [x] components are being declared multiple times

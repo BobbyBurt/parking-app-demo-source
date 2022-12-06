@@ -4,7 +4,7 @@
     "settings": {
         "preloadMethodName": "editorPreload",
         "preloadPackFiles": [
-            "parking-app-demo-source/assets/preload-asset-pack.json"
+            "parking-app-demo-source/assets/asset-pack.json"
         ],
         "createMethodName": "editorCreate",
         "sceneKey": "Preloader",
@@ -43,23 +43,23 @@
                     "text": "0%",
                     "fontFamily": "verdana",
                     "fontSize": "64px"
+                },
+                {
+                    "type": "Image",
+                    "id": "cc2c7c9e-a5d6-4391-9274-1b40f34075bf",
+                    "label": "spottr_logo",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.middle": true,
+                    "Align.center": true,
+                    "texture": {
+                        "key": "Spottr-logo"
+                    },
+                    "x": 714,
+                    "y": 630
                 }
             ]
-        },
-        {
-            "type": "Image",
-            "id": "cc2c7c9e-a5d6-4391-9274-1b40f34075bf",
-            "label": "spottr_logo",
-            "components": [
-                "Align"
-            ],
-            "Align.middle": true,
-            "Align.center": true,
-            "texture": {
-                "key": "Spottr-logo"
-            },
-            "x": 714,
-            "y": 630
         }
     ],
     "plainObjects": [],

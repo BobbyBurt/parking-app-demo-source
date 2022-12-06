@@ -2,9 +2,21 @@
     "section1": {
         "files": [
             {
+                "url": "assets/button.png",
+                "type": "image",
+                "key": "button"
+            },
+            {
                 "url": "src/components/PhysicsBody.js",
                 "type": "script",
                 "key": "PhysicsBody"
+            },
+            {
+                "url": [
+                    "assets/sfx/SMB-select-tick.wav"
+                ],
+                "type": "audio",
+                "key": "select"
             }
         ]
     },

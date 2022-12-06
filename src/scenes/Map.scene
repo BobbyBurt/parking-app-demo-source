@@ -3,9 +3,7 @@
     "sceneType": "SCENE",
     "settings": {
         "preloadMethodName": "editorPreload",
-        "preloadPackFiles": [
-            "parking-app-demo-source/assets/preload-asset-pack.json"
-        ],
+        "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "Map",
         "borderWidth": 1170,
@@ -65,22 +63,6 @@
                     "y": 220,
                     "originY": 1,
                     "text": "Bottom left corner",
-                    "fontFamily": "arial",
-                    "fontSize": "64px"
-                },
-                {
-                    "type": "Text",
-                    "id": "2ce42443-5227-4c9b-b498-e81f9a21cde3",
-                    "label": "progressText",
-                    "components": [
-                        "PreloadText",
-                        "Align"
-                    ],
-                    "Align.middle": true,
-                    "Align.center": true,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "0%",
                     "fontFamily": "arial",
                     "fontSize": "64px"
                 },

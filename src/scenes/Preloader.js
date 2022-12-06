@@ -16,7 +16,7 @@ class Preloader extends Phaser.Scene {
 	/** @returns {void} */
 	editorPreload() {
 
-		this.load.pack("preload-asset-pack", "assets/preload-asset-pack.json");
+		this.load.pack("asset-pack", "assets/asset-pack.json");
 	}
 
 	/** @returns {void} */
@@ -37,6 +37,7 @@ class Preloader extends Phaser.Scene {
 
 		// spottr_logo
 		const spottr_logo = this.add.image(714, 630, "Spottr-logo");
+		uiLayer.add(spottr_logo);
 
 		// progressText (components)
 		new PreloadText(progressText);
@@ -113,6 +114,8 @@ class Preloader extends Phaser.Scene {
 		if (this.loaded)
 		{
 			this.scene.start('Map');
+			window.removeEventListener('touchstart', this.onPointer);
+			window.removeEventListener('click', this.onPointer);
 		}
 	}
 

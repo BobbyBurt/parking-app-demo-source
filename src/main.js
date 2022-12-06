@@ -38,7 +38,7 @@ class Boot extends Phaser.Scene
 		this.registry.set('debug', true);
 		
 		this.load.pack("pack", "assets/preload-asset-pack.json");
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Map"));
+		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Preloader"));
 	}
 
 	create()
