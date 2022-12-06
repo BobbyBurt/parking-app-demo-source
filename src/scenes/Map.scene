@@ -4,10 +4,10 @@
     "settings": {
         "preloadMethodName": "editorPreload",
         "preloadPackFiles": [
-            "starter-template-basic-typescript/assets/asset-pack.json"
+            "parking-app-demo-source/assets/preload-asset-pack.json"
         ],
         "createMethodName": "editorCreate",
-        "sceneKey": "Preload",
+        "sceneKey": "Map",
         "borderWidth": 1170,
         "borderHeight": 2532
     },
@@ -138,6 +138,18 @@
                     "fontFamily": "arial",
                     "fontSize": "64px",
                     "color": "#000000ff"
+                },
+                {
+                    "type": "Polygon",
+                    "id": "24f809a6-578a-4501-aac6-b29aaa54e5d6",
+                    "label": "polygon_1",
+                    "components": [
+                        "ParkingLot"
+                    ],
+                    "x": 579,
+                    "y": 584,
+                    "isFilled": true,
+                    "points": "-104.7876519667015 391.5391632256992 238.16718935698958 283.76400946988 385.9383326189543 34.29731145142708 546.9859399499417 104.97420649501294 573.1438341196051 267.5103910176194 419.3449142564517 437.7845628766732 -100.83685264730366 555.5133876523623"
                 }
             ]
         }

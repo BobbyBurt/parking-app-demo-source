@@ -22,11 +22,21 @@
                 "key": "buttonOver"
             },
             {
+                "url": "src/components/ParkingLot.js",
+                "type": "script",
+                "key": "ParkingLot"
+            },
+            {
                 "url": [
                     "assets/sfx/SMB-select-tick.wav"
                 ],
                 "type": "audio",
                 "key": "select"
+            },
+            {
+                "url": "assets/Spottr-logo.png",
+                "type": "image",
+                "key": "Spottr-logo"
             }
         ]
     },

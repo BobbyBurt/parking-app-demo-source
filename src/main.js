@@ -22,7 +22,8 @@ window.addEventListener('load', function ()
 		}
 	});
 	
-	game.scene.add("Preload", Preload);
+	game.scene.add("Map", Map);
+	game.scene.add("Preloader", Preloader);
 	game.scene.add("Boot", Boot, true);
 });
 
@@ -37,7 +38,7 @@ class Boot extends Phaser.Scene
 		this.registry.set('debug', true);
 		
 		this.load.pack("pack", "assets/preload-asset-pack.json");
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Preload"));
+		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Map"));
 	}
 
 	create()

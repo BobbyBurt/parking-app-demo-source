@@ -172,6 +172,33 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "ParkingLot",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "totalSpots",
+                    "label": "Total Spots",
+                    "tooltip": "",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "freeSpots",
+                    "label": "Free Spots",
+                    "tooltip": "",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
         }
     ],
     "meta": {

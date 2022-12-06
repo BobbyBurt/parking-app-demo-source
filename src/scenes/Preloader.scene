@@ -1,0 +1,72 @@
+{
+    "id": "1acf3728-39b9-4d26-b6e9-195ca3033dbe",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadMethodName": "editorPreload",
+        "preloadPackFiles": [
+            "parking-app-demo-source/assets/preload-asset-pack.json"
+        ],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Preloader",
+        "borderWidth": 1170,
+        "borderHeight": 2532
+    },
+    "displayList": [
+        {
+            "type": "Layer",
+            "id": "e61fd5a6-2f1c-4972-8c3a-79c4d0017d89",
+            "label": "mainLayer",
+            "scope": "CLASS",
+            "components": [],
+            "list": []
+        },
+        {
+            "type": "Layer",
+            "id": "e6d7cf65-b420-4cd0-a543-7b0dca040e9f",
+            "label": "uiLayer",
+            "scope": "CLASS",
+            "components": [],
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "2ce42443-5227-4c9b-b498-e81f9a21cde3",
+                    "label": "progressText",
+                    "components": [
+                        "PreloadText",
+                        "Align"
+                    ],
+                    "Align.middle": true,
+                    "Align.center": true,
+                    "Align.verticalOffset": 200,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0%",
+                    "fontFamily": "verdana",
+                    "fontSize": "64px"
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "cc2c7c9e-a5d6-4391-9274-1b40f34075bf",
+            "label": "spottr_logo",
+            "components": [
+                "Align"
+            ],
+            "Align.middle": true,
+            "Align.center": true,
+            "texture": {
+                "key": "Spottr-logo"
+            },
+            "x": 714,
+            "y": 630
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

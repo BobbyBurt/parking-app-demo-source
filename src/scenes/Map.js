@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class Preload extends Phaser.Scene {
+class Map extends Phaser.Scene {
 
 	constructor() {
-		super("Preload");
+		super("Map");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -16,7 +16,7 @@ class Preload extends Phaser.Scene {
 	/** @returns {void} */
 	editorPreload() {
 
-		this.load.pack("asset-pack", "assets/asset-pack.json");
+		this.load.pack("preload-asset-pack", "assets/preload-asset-pack.json");
 	}
 
 	/** @returns {void} */
@@ -72,6 +72,11 @@ class Preload extends Phaser.Scene {
 		buttonText.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "arial", "fontSize": "64px" });
 		uiLayer.add(buttonText);
 
+		// polygon_1
+		const polygon_1 = this.add.polygon(579, 584, "-104.7876519667015 391.5391632256992 238.16718935698958 283.76400946988 385.9383326189543 34.29731145142708 546.9859399499417 104.97420649501294 573.1438341196051 267.5103910176194 419.3449142564517 437.7845628766732 -100.83685264730366 555.5133876523623");
+		polygon_1.isFilled = true;
+		uiLayer.add(polygon_1);
+
 		// dialogueText (components)
 		const dialogueTextButton = new Button(dialogueText);
 		dialogueTextButton.eventToEmit = "textButton";
@@ -100,6 +105,9 @@ class Preload extends Phaser.Scene {
 		const buttonButton = new Button(button);
 		buttonButton.eventToEmit = "showDialogue";
 
+		// polygon_1 (components)
+		new ParkingLot(polygon_1);
+
 		this.mainLayer = mainLayer;
 		this.uiLayer = uiLayer;
 		this.dialogueText = dialogueText;
@@ -122,31 +130,13 @@ class Preload extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
-	loaded = false;
-
 	preload()
 	{
 		this.editorCreate();
 
-		this.editorPreload();
-
 		this.initCameras();
 
 		this.resize();
-
-	// camera
-		this.cameras.main.setViewport(0, 0, this.scale.width, this.scale.height);
-		this.cameras.main.setBackgroundColor(0x242424);
-
-	// start input
-		window.addEventListener('touchstart', this.onPointer);
-		window.addEventListener('click', this.onPointer);
-
-	// load event
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => 
-		{
-			this.loaded = true;
-		});
 	}
 
 	create()
@@ -205,29 +195,6 @@ class Preload extends Phaser.Scene {
 		// this is a possible edgecase in how show/hideDialogue are implimented I will fix it.
 	}
 
-	/** 
-	 * Set registry's mobile value based on input.
-	 * 
-	 * Start the game if loaded.
-	 */
-	onPointer = (event) => 
-	{
-	// set registry's mobile value
-		if (event.type == 'touchstart')
-		{
-			this.registry.set('mobile', true);
-		}
-		else if (event.type == 'click')
-		{
-			this.registry.set('mobile', false);
-		}
-
-		if (this.loaded)
-		{
-			// this.start();
-		}
-	}
-
 	/**
 	 * CURRENTLY DEPRECATED
 	 * 
@@ -256,6 +223,8 @@ class Preload extends Phaser.Scene {
 	// main
 		this.cameras.main.ignore(this.uiLayer.getChildren());
 		this.cameras.main.setName('main');
+		this.cameras.main.setViewport(0, 0, this.scale.width, this.scale.height);
+		this.cameras.main.setBackgroundColor(0x242424);
 
 	// UI
 		this.UICam = this.cameras.add(0, 0, this.cameras.main.width, this.cameras.main.height);
