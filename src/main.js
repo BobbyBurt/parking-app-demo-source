@@ -70,7 +70,6 @@ class Boot extends Phaser.Scene
 
 			// prerender UICam so that scale is up to date
 				this.uiCam = scene.cameras.getCamera('UICam');
-				console.log(this.uiCam);
 				if (this.uiCam)
 				{
 					this.uiCam.preRender(1);

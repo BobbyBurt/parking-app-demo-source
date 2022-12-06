@@ -12,6 +12,11 @@
                 "key": "Button"
             },
             {
+                "url": "src/components/MapDrag.js",
+                "type": "script",
+                "key": "MapDrag"
+            },
+            {
                 "url": "src/components/ParkingLot.js",
                 "type": "script",
                 "key": "ParkingLot"

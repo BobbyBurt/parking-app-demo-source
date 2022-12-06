@@ -7,6 +7,11 @@
                 "key": "button"
             },
             {
+                "url": "assets/map-temp.png",
+                "type": "image",
+                "key": "map-temp"
+            },
+            {
                 "url": "src/components/PhysicsBody.js",
                 "type": "script",
                 "key": "PhysicsBody"

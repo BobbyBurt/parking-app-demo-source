@@ -19,6 +19,26 @@ class Map extends Phaser.Scene {
 		// mainLayer
 		const mainLayer = this.add.layer();
 
+		// mapContainer
+		const mapContainer = this.add.container(0, 0);
+		mainLayer.add(mapContainer);
+
+		// mapTemp
+		const mapTemp = this.add.image(784, 1401, "map-temp");
+		mapTemp.scaleX = 4.567640778523811;
+		mapTemp.scaleY = 4.567640778523811;
+		mapTemp.alpha = 0.4;
+		mapTemp.alphaTopLeft = 0.4;
+		mapTemp.alphaTopRight = 0.4;
+		mapTemp.alphaBottomLeft = 0.4;
+		mapTemp.alphaBottomRight = 0.4;
+		mapContainer.add(mapTemp);
+
+		// lotTest
+		const lotTest = this.add.polygon(579, 584, "-104.7876519667015 391.5391632256992 238.16718935698958 283.76400946988 385.9383326189543 34.29731145142708 546.9859399499417 104.97420649501294 573.1438341196051 267.5103910176194 419.3449142564517 437.7845628766732 -100.83685264730366 555.5133876523623");
+		lotTest.isFilled = true;
+		mapContainer.add(lotTest);
+
 		// uiLayer
 		const uiLayer = this.add.layer();
 
@@ -59,10 +79,11 @@ class Map extends Phaser.Scene {
 		buttonText.setStyle({ "align": "center", "color": "#000000ff", "fontFamily": "arial", "fontSize": "64px" });
 		uiLayer.add(buttonText);
 
-		// polygon_1
-		const polygon_1 = this.add.polygon(579, 584, "-104.7876519667015 391.5391632256992 238.16718935698958 283.76400946988 385.9383326189543 34.29731145142708 546.9859399499417 104.97420649501294 573.1438341196051 267.5103910176194 419.3449142564517 437.7845628766732 -100.83685264730366 555.5133876523623");
-		polygon_1.isFilled = true;
-		uiLayer.add(polygon_1);
+		// mapContainer (components)
+		new MapDrag(mapContainer);
+
+		// lotTest (components)
+		new ParkingLot(lotTest);
 
 		// dialogueText (components)
 		const dialogueTextButton = new Button(dialogueText);
@@ -85,9 +106,6 @@ class Map extends Phaser.Scene {
 		// button (components)
 		const buttonButton = new Button(button);
 		buttonButton.eventToEmit = "showDialogue";
-
-		// polygon_1 (components)
-		new ParkingLot(polygon_1);
 
 		this.mainLayer = mainLayer;
 		this.uiLayer = uiLayer;
@@ -227,7 +245,7 @@ class Map extends Phaser.Scene {
 
 	resize()
 	{
-
+		// call adaptive zoom
 	}
 
 	/* END-USER-CODE */

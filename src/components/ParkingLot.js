@@ -51,11 +51,22 @@ class ParkingLot extends UserComponent {
 
 			_this.scene.sound.play('select', {volume: .3});
 		});
-
-		this.gameObject.on('pointerup', function (pointer, gameObject)
+		
+		this.gameObject.on('pointerout', function (pointer, gameObject)
+			// also catches 'pointerup'
 		{
 			_this.gameObject.setAlpha(1);
 		});
+
+		this.gameObject.on('pointerup', function (pointer, gameObject)
+		{
+			// display lot info
+		});
+			// The existance of pointer events on these objects means user can't drag the whole 
+			// container when pointerdown over these objects.
+			// TODO: fix this
+				// Don't know how, so despite having a significant impact on useability, this is 
+				// low priority.
 	}
 
 	/* END-USER-CODE */

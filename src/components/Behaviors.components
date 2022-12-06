@@ -199,6 +199,12 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "MapDrag",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
         }
     ],
     "meta": {
