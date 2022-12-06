@@ -33,6 +33,7 @@ class Map extends Phaser.Scene {
 		const occupancyHeatmap = this.add.image(784, 1401, "heatmap-temp-1");
 		occupancyHeatmap.scaleX = 4.567640778523811;
 		occupancyHeatmap.scaleY = 4.567640778523811;
+		occupancyHeatmap.visible = false;
 		mapContainer.add(occupancyHeatmap);
 
 		// turnoverHeatmap
@@ -43,10 +44,16 @@ class Map extends Phaser.Scene {
 		mapContainer.add(turnoverHeatmap);
 
 		// lotTest
-		const lotTest = this.add.polygon(579, 584, "-104.7876519667015 391.5391632256992 238.16718935698958 283.76400946988 385.9383326189543 34.29731145142708 546.9859399499417 104.97420649501294 573.1438341196051 267.5103910176194 419.3449142564517 437.7845628766732 -100.83685264730366 555.5133876523623");
+		const lotTest = this.add.polygon(232, 717, "18.66017994061758 532.5989563943024 -90.11305535640798 255.90731013755897 438.0334973630689 79.54802215952583 532.3121845915389 343.649652018609");
 		lotTest.isFilled = true;
 		lotTest.fillColor = 15854442;
 		mapContainer.add(lotTest);
+
+		// lotTest_1
+		const lotTest_1 = this.add.polygon(-682, 618, "18.66017994061758 532.5989563943024 -40.168979296773045 254.64087785763388 631.6231217654316 47.83210126189667 725.9672771870842 304.8089745904525");
+		lotTest_1.isFilled = true;
+		lotTest_1.fillColor = 15854442;
+		mapContainer.add(lotTest_1);
 
 		// uiLayer
 		const uiLayer = this.add.layer();
@@ -124,11 +131,21 @@ class Map extends Phaser.Scene {
 		lotViewButton.fillColor = 5131854;
 		uiLayer.add(lotViewButton);
 
+		// lists
+		const lots = [lotTest, lotTest_1];
+
 		// mapContainer (components)
 		new MapDrag(mapContainer);
 
 		// lotTest (components)
-		new ParkingLot(lotTest);
+		const lotTestParkingLot = new ParkingLot(lotTest);
+		lotTestParkingLot.totalSpots = 10;
+		lotTestParkingLot.freeSpots = 2;
+
+		// lotTest_1 (components)
+		const lotTest_1ParkingLot = new ParkingLot(lotTest_1);
+		lotTest_1ParkingLot.totalSpots = 22;
+		lotTest_1ParkingLot.freeSpots = 6;
 
 		// bottomBar (components)
 		const bottomBarAlign = new Align(bottomBar);
@@ -186,6 +203,7 @@ class Map extends Phaser.Scene {
 		this.turnoverViewButton = turnoverViewButton;
 		this.occupancyViewButton_1 = occupancyViewButton_1;
 		this.lotViewButton = lotViewButton;
+		this.lots = lots;
 
 		this.events.emit("scene-awake");
 	}
@@ -206,6 +224,8 @@ class Map extends Phaser.Scene {
 	occupancyViewButton_1;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	lotViewButton;
+	/** @type {Phaser.GameObjects.Polygon[]} */
+	lots;
 
 	/* START-USER-CODE */
 
@@ -253,6 +273,9 @@ class Map extends Phaser.Scene {
 		{
 			_this.setLotView();
 		});
+
+	// TEST: lots
+		this.setLotVisibility(false);
 
 	// SFX
 		this.sound.add('select');
@@ -304,7 +327,7 @@ class Map extends Phaser.Scene {
 
 		this.occupancyHeatmap.visible = true;
 		this.turnoverHeatmap.visible = false;
-		// hide lots
+		this.setLotVisibility(false);
 	}
 
 	setTurnoverView()
@@ -317,10 +340,10 @@ class Map extends Phaser.Scene {
 
 		this.turnoverHeatmap.visible = true;
 		this.occupancyHeatmap.visible = false;
-		// hide lots
+		this.setLotVisibility(false);
 	}
 
-	setTurnoverView()
+	setLotView()
 	{
 		if (this.mapView == 'lot')
 		{
@@ -329,9 +352,20 @@ class Map extends Phaser.Scene {
 		this.mapView = 'lot'
 
 		// show lots
+		this.setLotVisibility(true);
 		this.turnoverHeatmap.visible = false;
 		this.occupancyHeatmap.visible = false;
 	}
+
+	setLotVisibility(visible)
+	{
+		this.lots.forEach(function (object, index)
+		{
+			object.setVisible(visible);
+			object.setActive(visible);
+		});
+	}
+
 
 	/**
 	 * CURRENTLY DEPRECATED

@@ -61,6 +61,7 @@ class ParkingLot extends UserComponent {
 		this.gameObject.on('pointerup', function (pointer, gameObject)
 		{
 			// display lot info
+			console.log('lot info: ' + _this.freeSpots + '/' + _this.totalSpots + ' free spots')
 		});
 			// The existance of pointer events on these objects means user can't drag the whole 
 			// container when pointerdown over these objects.
