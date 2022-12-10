@@ -197,6 +197,56 @@
                     "type": {
                         "id": "number"
                     }
+                },
+                {
+                    "name": "peakOccupancy",
+                    "label": "Peak Occupancy Time",
+                    "tooltip": "format ex: \"1:00pm\"",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "peakAvailability",
+                    "label": "Peak Availability Time",
+                    "tooltip": "format ex: \"2:00pm\"",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "address",
+                    "label": "Address",
+                    "tooltip": "paste from Google Maps",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "handicap",
+                    "label": "Handicap Parking",
+                    "tooltip": "",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "averageTurnover",
+                    "label": "Average Turnover Rate",
+                    "tooltip": "format ex: \"50 min\"",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
                 }
             ]
         },

@@ -77,6 +77,11 @@
                             ],
                             "ParkingLot.totalSpots": 10,
                             "ParkingLot.freeSpots": 2,
+                            "ParkingLot.peakOccupancy": "1:00pm",
+                            "ParkingLot.peakAvailability": "5:00pm",
+                            "ParkingLot.address": "106 Humber College Blvd, Etobicoke, ON M9V 4E4",
+                            "ParkingLot.handicap": true,
+                            "ParkingLot.averageTurnover": "50 min",
                             "x": 232,
                             "y": 717,
                             "isFilled": true,
@@ -92,6 +97,10 @@
                             ],
                             "ParkingLot.totalSpots": 22,
                             "ParkingLot.freeSpots": 6,
+                            "ParkingLot.peakOccupancy": "2:00pm",
+                            "ParkingLot.peakAvailability": "11:00am",
+                            "ParkingLot.address": "413 Humber College Blvd, Etobicoke, ON M9V 4E4",
+                            "ParkingLot.averageTurnover": "15 min",
                             "x": -682,
                             "y": 618,
                             "isFilled": true,
@@ -111,6 +120,26 @@
             "list": [
                 {
                     "type": "Rectangle",
+                    "id": "1fb976d4-e00f-4450-a686-6dd300072286",
+                    "label": "viewDescBar",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.up": true,
+                    "Align.down": true,
+                    "Align.center": true,
+                    "x": -163,
+                    "y": 2551,
+                    "scaleX": 30,
+                    "scaleY": 2.613718040817636,
+                    "originY": 1,
+                    "isFilled": true,
+                    "fillColor": "#2e2e2e",
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Rectangle",
                     "id": "26e92fef-bc6e-4761-95d4-00c6d70aef74",
                     "label": "bottomBar",
                     "components": [
@@ -126,6 +155,9 @@
                     "originY": 1,
                     "isFilled": true,
                     "fillColor": "#2e2e2e",
+                    "strokeColor": "#747474",
+                    "lineWidth": 3,
+                    "isStroked": true,
                     "width": 128,
                     "height": 128
                 },
@@ -135,9 +167,11 @@
                     "label": "dialogueText",
                     "scope": "CLASS",
                     "components": [
-                        "Button"
+                        "Button",
+                        "Align"
                     ],
                     "Button.eventToEmit": "textButton",
+                    "Align.center": true,
                     "x": 576,
                     "y": 1245,
                     "originX": 0.5,
@@ -286,6 +320,240 @@
                     "fillColor": "#4e4e4e",
                     "width": 128,
                     "height": 128
+                },
+                {
+                    "type": "Container",
+                    "id": "56fa4864-6546-4c11-b82f-46a3ef62600a",
+                    "label": "lotInfoContainer",
+                    "scope": "CLASS",
+                    "components": [],
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "a1eac3cc-cd67-4472-818c-6e4e13eee4b1",
+                            "label": "lotInfoBox",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 577,
+                            "y": 1420,
+                            "scaleX": 8.078620791835995,
+                            "scaleY": 9.069518661883569,
+                            "isFilled": true,
+                            "fillColor": "#404040",
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0be89095-aec8-49ca-997f-7bde1a0646d9",
+                            "label": "lotInfoAddress",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 574,
+                            "y": 902,
+                            "originX": 0.5,
+                            "text": "107 Humber College Blvd, Etobicoke, ON M9V 4E4",
+                            "fixedWidth": 950,
+                            "fixedHeight": 100,
+                            "fontFamily": "arial",
+                            "fontSize": "40px",
+                            "color": "#cbcbcbff",
+                            "wordWrapWidth": 950
+                        },
+                        {
+                            "type": "Rectangle",
+                            "id": "d76ae146-480f-49fd-b2c2-336e59c984cb",
+                            "label": "rectangle_1",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 578,
+                            "y": 1205,
+                            "scaleX": 7.737948387382009,
+                            "scaleY": 2.482453812100876,
+                            "isFilled": true,
+                            "fillColor": "#5e5e5e",
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b6bce9a8-6f8e-4570-a9a0-956d947e5698",
+                            "label": "lotInfoSpots",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 580,
+                            "y": 1494,
+                            "originX": 0.5,
+                            "text": "Free spots: x/y",
+                            "fixedWidth": 950,
+                            "fixedHeight": 100,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 950
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f000ea45-938f-4f22-9074-244c66176767",
+                            "label": "lotInfoTurnoverText",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 576,
+                            "y": 1563,
+                            "originX": 0.5,
+                            "text": "Average turnover rate: 1 hr",
+                            "fixedWidth": 950,
+                            "fixedHeight": 100,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 950
+                        },
+                        {
+                            "type": "Text",
+                            "id": "43739ed2-804b-484d-a72d-f24064d0a429",
+                            "label": "lotInfoOccupancyText",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 575,
+                            "y": 1639,
+                            "originX": 0.5,
+                            "text": "Peak occupancy: 1:00pm",
+                            "fixedWidth": 950,
+                            "fixedHeight": 100,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 950
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0b19a57b-16fd-4cff-918a-06e310d20b1a",
+                            "label": "lotInfoAvailabilityText",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 573,
+                            "y": 1705,
+                            "originX": 0.5,
+                            "text": "Peak availability: 5:00pm",
+                            "fixedWidth": 950,
+                            "fixedHeight": 100,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 950
+                        },
+                        {
+                            "type": "Rectangle",
+                            "id": "72c02119-40b3-4dfb-babf-892b9a416610",
+                            "label": "rectangle",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 582,
+                            "y": 1872,
+                            "scaleX": 7.737948387382009,
+                            "scaleY": 1.0472114846743532,
+                            "isFilled": true,
+                            "fillColor": "#5e5e5e",
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Text",
+                            "id": "291d41b9-44ca-45d8-94c7-bb2871864057",
+                            "label": "lotInfoHeader",
+                            "scope": "CLASS",
+                            "components": [
+                                "Align"
+                            ],
+                            "Align.center": true,
+                            "x": 601,
+                            "y": 1070,
+                            "originX": 0.5,
+                            "text": "Public Parking lot",
+                            "fixedWidth": 800,
+                            "fontFamily": "arial",
+                            "fontSize": "50px"
+                        },
+                        {
+                            "type": "Ellipse",
+                            "id": "8a4fb093-3f94-4712-97ab-6fcd321447fd",
+                            "label": "lotInfoIcon",
+                            "scope": "CLASS",
+                            "components": [],
+                            "x": 131,
+                            "y": 1092,
+                            "scaleX": 0.38636524889129314,
+                            "scaleY": 0.38636524889129314,
+                            "isFilled": true,
+                            "fillColor": "#fcf80d",
+                            "width": 128,
+                            "height": 128
+                        }
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "id": "f6258a3d-eb12-4c01-b1f8-7467735bedb5",
+                    "label": "viewLabel",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.center": true,
+                    "x": 652,
+                    "y": 2250,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Occupancy view",
+                    "align": "center",
+                    "fontFamily": "arial",
+                    "fontSize": "50px",
+                    "color": "#FFDD00"
+                },
+                {
+                    "type": "Text",
+                    "id": "af196961-4a5c-4965-a797-98b457561277",
+                    "label": "viewDesc",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.center": true,
+                    "x": 672,
+                    "y": 2307,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Which general areas are busy",
+                    "align": "center",
+                    "fontFamily": "arial",
+                    "fontSize": "40px",
+                    "color": "#ffff"
                 }
             ]
         }

@@ -33,25 +33,44 @@ class ParkingLot extends UserComponent {
 	totalSpots = 0;
 	/** @type {number} */
 	freeSpots = 0;
+	/** @type {string} */
+	peakOccupancy = "";
+	/** @type {string} */
+	peakAvailability = "";
+	/** @type {string} */
+	address = "";
+	/** @type {boolean} */
+	handicap = false;
+	/** @type {string} */
+	averageTurnover = "";
 
 	/* START-USER-CODE */
 
 	start()
 	{
+		this.lotInfo = 
+		{
+			totalSpots: this.totalSpots,
+			freeSpots: this.freeSpots,
+			peakOccupancy: this.peakOccupancy,
+			peakAvailability: this.peakAvailability,
+			address: this.address,
+			handicap: this.handicap,
+			averageTurnover: this.averageTurnover
+		}
+
 		this.gameObject.setInteractive(this.gameObject.geom, Phaser.Geom.Polygon.Contains);
 
 		let _this = this;
 		this.gameObject.on('pointerdown', function (pointer, gameObject) 
 		{
 			_this.scene.events.emit(_this.eventToEmit);
-				// This could be extended by having arg component properties. Only issue is that 
-				// those properties would be fixed in amount and type.
 
 			_this.gameObject.setAlpha(.7);
 
 			_this.scene.sound.play('select', {volume: .3});
 		});
-		
+
 		this.gameObject.on('pointerout', function (pointer, gameObject)
 			// also catches 'pointerup'
 		{
@@ -61,7 +80,7 @@ class ParkingLot extends UserComponent {
 		this.gameObject.on('pointerup', function (pointer, gameObject)
 		{
 			// display lot info
-			console.log('lot info: ' + _this.freeSpots + '/' + _this.totalSpots + ' free spots')
+			_this.scene.setLotInfo(true, _this.lotInfo)
 		});
 			// The existance of pointer events on these objects means user can't drag the whole 
 			// container when pointerdown over these objects.

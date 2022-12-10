@@ -30,7 +30,7 @@ window.addEventListener('load', function ()
 class Boot extends Phaser.Scene
 {
 	/**
-	 * load preload assets, then the scene
+	 * load preload assets, then trehe scene
 	 */
 	preload()
 	{

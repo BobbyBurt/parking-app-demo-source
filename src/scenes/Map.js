@@ -58,6 +58,15 @@ class Map extends Phaser.Scene {
 		// uiLayer
 		const uiLayer = this.add.layer();
 
+		// viewDescBar
+		const viewDescBar = this.add.rectangle(-163, 2551, 128, 128);
+		viewDescBar.scaleX = 30;
+		viewDescBar.scaleY = 2.613718040817636;
+		viewDescBar.setOrigin(0.5, 1);
+		viewDescBar.isFilled = true;
+		viewDescBar.fillColor = 3026478;
+		uiLayer.add(viewDescBar);
+
 		// bottomBar
 		const bottomBar = this.add.rectangle(605, 2546, 128, 128);
 		bottomBar.scaleX = 30;
@@ -65,6 +74,9 @@ class Map extends Phaser.Scene {
 		bottomBar.setOrigin(0.5, 1);
 		bottomBar.isFilled = true;
 		bottomBar.fillColor = 3026478;
+		bottomBar.isStroked = true;
+		bottomBar.strokeColor = 7631988;
+		bottomBar.lineWidth = 3;
 		uiLayer.add(bottomBar);
 
 		// dialogueText
@@ -131,6 +143,104 @@ class Map extends Phaser.Scene {
 		lotViewButton.fillColor = 5131854;
 		uiLayer.add(lotViewButton);
 
+		// lotInfoContainer
+		const lotInfoContainer = this.add.container(0, 0);
+		lotInfoContainer.visible = false;
+		uiLayer.add(lotInfoContainer);
+
+		// lotInfoBox
+		const lotInfoBox = this.add.rectangle(577, 1420, 128, 128);
+		lotInfoBox.scaleX = 8.078620791835995;
+		lotInfoBox.scaleY = 9.069518661883569;
+		lotInfoBox.isFilled = true;
+		lotInfoBox.fillColor = 4210752;
+		lotInfoContainer.add(lotInfoBox);
+
+		// lotInfoAddress
+		const lotInfoAddress = this.add.text(574, 902, "", {});
+		lotInfoAddress.setOrigin(0.5, 0);
+		lotInfoAddress.text = "107 Humber College Blvd, Etobicoke, ON M9V 4E4";
+		lotInfoAddress.setStyle({ "color": "#cbcbcbff", "fixedWidth":950,"fixedHeight":100,"fontFamily": "arial", "fontSize": "40px" });
+		lotInfoAddress.setWordWrapWidth(950);
+		lotInfoContainer.add(lotInfoAddress);
+
+		// rectangle_1
+		const rectangle_1 = this.add.rectangle(578, 1205, 128, 128);
+		rectangle_1.scaleX = 7.737948387382009;
+		rectangle_1.scaleY = 2.482453812100876;
+		rectangle_1.isFilled = true;
+		rectangle_1.fillColor = 6184542;
+		lotInfoContainer.add(rectangle_1);
+
+		// lotInfoSpots
+		const lotInfoSpots = this.add.text(580, 1494, "", {});
+		lotInfoSpots.setOrigin(0.5, 0);
+		lotInfoSpots.text = "Free spots: x/y";
+		lotInfoSpots.setStyle({ "color": "#ffffffff", "fixedWidth":950,"fixedHeight":100,"fontFamily": "arial", "fontSize": "50px" });
+		lotInfoSpots.setWordWrapWidth(950);
+		lotInfoContainer.add(lotInfoSpots);
+
+		// lotInfoTurnoverText
+		const lotInfoTurnoverText = this.add.text(576, 1563, "", {});
+		lotInfoTurnoverText.setOrigin(0.5, 0);
+		lotInfoTurnoverText.text = "Average turnover rate: 1 hr";
+		lotInfoTurnoverText.setStyle({ "color": "#ffffffff", "fixedWidth":950,"fixedHeight":100,"fontFamily": "arial", "fontSize": "50px" });
+		lotInfoTurnoverText.setWordWrapWidth(950);
+		lotInfoContainer.add(lotInfoTurnoverText);
+
+		// lotInfoOccupancyText
+		const lotInfoOccupancyText = this.add.text(575, 1639, "", {});
+		lotInfoOccupancyText.setOrigin(0.5, 0);
+		lotInfoOccupancyText.text = "Peak occupancy: 1:00pm";
+		lotInfoOccupancyText.setStyle({ "color": "#ffffffff", "fixedWidth":950,"fixedHeight":100,"fontFamily": "arial", "fontSize": "50px" });
+		lotInfoOccupancyText.setWordWrapWidth(950);
+		lotInfoContainer.add(lotInfoOccupancyText);
+
+		// lotInfoAvailabilityText
+		const lotInfoAvailabilityText = this.add.text(573, 1705, "", {});
+		lotInfoAvailabilityText.setOrigin(0.5, 0);
+		lotInfoAvailabilityText.text = "Peak availability: 5:00pm";
+		lotInfoAvailabilityText.setStyle({ "color": "#ffffffff", "fixedWidth":950,"fixedHeight":100,"fontFamily": "arial", "fontSize": "50px" });
+		lotInfoAvailabilityText.setWordWrapWidth(950);
+		lotInfoContainer.add(lotInfoAvailabilityText);
+
+		// rectangle
+		const rectangle = this.add.rectangle(582, 1872, 128, 128);
+		rectangle.scaleX = 7.737948387382009;
+		rectangle.scaleY = 1.0472114846743532;
+		rectangle.isFilled = true;
+		rectangle.fillColor = 6184542;
+		lotInfoContainer.add(rectangle);
+
+		// lotInfoHeader
+		const lotInfoHeader = this.add.text(601, 1070, "", {});
+		lotInfoHeader.setOrigin(0.5, 0);
+		lotInfoHeader.text = "Public Parking lot";
+		lotInfoHeader.setStyle({ "fixedWidth":800,"fontFamily": "arial", "fontSize": "50px" });
+		lotInfoContainer.add(lotInfoHeader);
+
+		// lotInfoIcon
+		const lotInfoIcon = this.add.ellipse(131, 1092, 128, 128);
+		lotInfoIcon.scaleX = 0.38636524889129314;
+		lotInfoIcon.scaleY = 0.38636524889129314;
+		lotInfoIcon.isFilled = true;
+		lotInfoIcon.fillColor = 16578573;
+		lotInfoContainer.add(lotInfoIcon);
+
+		// viewLabel
+		const viewLabel = this.add.text(652, 2250, "", {});
+		viewLabel.setOrigin(0.5, 0.5);
+		viewLabel.text = "Occupancy view";
+		viewLabel.setStyle({ "align": "center", "color": "#FFDD00", "fontFamily": "arial", "fontSize": "50px" });
+		uiLayer.add(viewLabel);
+
+		// viewDesc
+		const viewDesc = this.add.text(672, 2307, "", {});
+		viewDesc.setOrigin(0.5, 0.5);
+		viewDesc.text = "Which general areas are busy";
+		viewDesc.setStyle({ "align": "center", "color": "#ffff", "fontFamily": "arial", "fontSize": "40px" });
+		uiLayer.add(viewDesc);
+
 		// lists
 		const lots = [lotTest, lotTest_1];
 
@@ -141,11 +251,26 @@ class Map extends Phaser.Scene {
 		const lotTestParkingLot = new ParkingLot(lotTest);
 		lotTestParkingLot.totalSpots = 10;
 		lotTestParkingLot.freeSpots = 2;
+		lotTestParkingLot.peakOccupancy = "1:00pm";
+		lotTestParkingLot.peakAvailability = "5:00pm";
+		lotTestParkingLot.address = "106 Humber College Blvd, Etobicoke, ON M9V 4E4";
+		lotTestParkingLot.handicap = true;
+		lotTestParkingLot.averageTurnover = "50 min";
 
 		// lotTest_1 (components)
 		const lotTest_1ParkingLot = new ParkingLot(lotTest_1);
 		lotTest_1ParkingLot.totalSpots = 22;
 		lotTest_1ParkingLot.freeSpots = 6;
+		lotTest_1ParkingLot.peakOccupancy = "2:00pm";
+		lotTest_1ParkingLot.peakAvailability = "11:00am";
+		lotTest_1ParkingLot.address = "413 Humber College Blvd, Etobicoke, ON M9V 4E4";
+		lotTest_1ParkingLot.averageTurnover = "15 min";
+
+		// viewDescBar (components)
+		const viewDescBarAlign = new Align(viewDescBar);
+		viewDescBarAlign.up = true;
+		viewDescBarAlign.down = true;
+		viewDescBarAlign.center = true;
 
 		// bottomBar (components)
 		const bottomBarAlign = new Align(bottomBar);
@@ -156,6 +281,8 @@ class Map extends Phaser.Scene {
 		// dialogueText (components)
 		const dialogueTextButton = new Button(dialogueText);
 		dialogueTextButton.eventToEmit = "textButton";
+		const dialogueTextAlign = new Align(dialogueText);
+		dialogueTextAlign.center = true;
 
 		// turnoverViewButton (components)
 		const turnoverViewButtonButton = new Button(turnoverViewButton);
@@ -195,6 +322,50 @@ class Map extends Phaser.Scene {
 		lotViewButtonAlign.center = true;
 		lotViewButtonAlign.horizontalOffset = 300;
 
+		// lotInfoBox (components)
+		const lotInfoBoxAlign = new Align(lotInfoBox);
+		lotInfoBoxAlign.center = true;
+
+		// lotInfoAddress (components)
+		const lotInfoAddressAlign = new Align(lotInfoAddress);
+		lotInfoAddressAlign.center = true;
+
+		// rectangle_1 (components)
+		const rectangle_1Align = new Align(rectangle_1);
+		rectangle_1Align.center = true;
+
+		// lotInfoSpots (components)
+		const lotInfoSpotsAlign = new Align(lotInfoSpots);
+		lotInfoSpotsAlign.center = true;
+
+		// lotInfoTurnoverText (components)
+		const lotInfoTurnoverTextAlign = new Align(lotInfoTurnoverText);
+		lotInfoTurnoverTextAlign.center = true;
+
+		// lotInfoOccupancyText (components)
+		const lotInfoOccupancyTextAlign = new Align(lotInfoOccupancyText);
+		lotInfoOccupancyTextAlign.center = true;
+
+		// lotInfoAvailabilityText (components)
+		const lotInfoAvailabilityTextAlign = new Align(lotInfoAvailabilityText);
+		lotInfoAvailabilityTextAlign.center = true;
+
+		// rectangle (components)
+		const rectangleAlign = new Align(rectangle);
+		rectangleAlign.center = true;
+
+		// lotInfoHeader (components)
+		const lotInfoHeaderAlign = new Align(lotInfoHeader);
+		lotInfoHeaderAlign.center = true;
+
+		// viewLabel (components)
+		const viewLabelAlign = new Align(viewLabel);
+		viewLabelAlign.center = true;
+
+		// viewDesc (components)
+		const viewDescAlign = new Align(viewDesc);
+		viewDescAlign.center = true;
+
 		this.mainLayer = mainLayer;
 		this.occupancyHeatmap = occupancyHeatmap;
 		this.turnoverHeatmap = turnoverHeatmap;
@@ -203,6 +374,19 @@ class Map extends Phaser.Scene {
 		this.turnoverViewButton = turnoverViewButton;
 		this.occupancyViewButton_1 = occupancyViewButton_1;
 		this.lotViewButton = lotViewButton;
+		this.lotInfoContainer = lotInfoContainer;
+		this.lotInfoBox = lotInfoBox;
+		this.lotInfoAddress = lotInfoAddress;
+		this.rectangle_1 = rectangle_1;
+		this.lotInfoSpots = lotInfoSpots;
+		this.lotInfoTurnoverText = lotInfoTurnoverText;
+		this.lotInfoOccupancyText = lotInfoOccupancyText;
+		this.lotInfoAvailabilityText = lotInfoAvailabilityText;
+		this.rectangle = rectangle;
+		this.lotInfoHeader = lotInfoHeader;
+		this.lotInfoIcon = lotInfoIcon;
+		this.viewLabel = viewLabel;
+		this.viewDesc = viewDesc;
 		this.lots = lots;
 
 		this.events.emit("scene-awake");
@@ -224,6 +408,32 @@ class Map extends Phaser.Scene {
 	occupancyViewButton_1;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	lotViewButton;
+	/** @type {Phaser.GameObjects.Container} */
+	lotInfoContainer;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	lotInfoBox;
+	/** @type {Phaser.GameObjects.Text} */
+	lotInfoAddress;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_1;
+	/** @type {Phaser.GameObjects.Text} */
+	lotInfoSpots;
+	/** @type {Phaser.GameObjects.Text} */
+	lotInfoTurnoverText;
+	/** @type {Phaser.GameObjects.Text} */
+	lotInfoOccupancyText;
+	/** @type {Phaser.GameObjects.Text} */
+	lotInfoAvailabilityText;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle;
+	/** @type {Phaser.GameObjects.Text} */
+	lotInfoHeader;
+	/** @type {Phaser.GameObjects.Ellipse} */
+	lotInfoIcon;
+	/** @type {Phaser.GameObjects.Text} */
+	viewLabel;
+	/** @type {Phaser.GameObjects.Text} */
+	viewDesc;
 	/** @type {Phaser.GameObjects.Polygon[]} */
 	lots;
 
@@ -328,6 +538,11 @@ class Map extends Phaser.Scene {
 		this.occupancyHeatmap.visible = true;
 		this.turnoverHeatmap.visible = false;
 		this.setLotVisibility(false);
+		this.lotInfoContainer.setVisible(false);
+
+		this.viewLabel.setText('Occupancy view');
+		this.viewDesc.setText('Which areas have parking occupancy');
+			// TODO: think of a better way to word this
 	}
 
 	setTurnoverView()
@@ -341,6 +556,10 @@ class Map extends Phaser.Scene {
 		this.turnoverHeatmap.visible = true;
 		this.occupancyHeatmap.visible = false;
 		this.setLotVisibility(false);
+		this.lotInfoContainer.setVisible(false);
+
+		this.viewLabel.setText('Turnover view');
+		this.viewDesc.setText('Which areas have a longer turnover rate');
 	}
 
 	setLotView()
@@ -355,6 +574,9 @@ class Map extends Phaser.Scene {
 		this.setLotVisibility(true);
 		this.turnoverHeatmap.visible = false;
 		this.occupancyHeatmap.visible = false;
+
+		this.viewLabel.setText('Lot view');
+		this.viewDesc.setText('Get info on individual parking lots');
 	}
 
 	setLotVisibility(visible)
@@ -365,6 +587,29 @@ class Map extends Phaser.Scene {
 			object.setActive(visible);
 		});
 	}
+
+	/**
+	 * show lot info UI, update info for given parking lot
+	 * @param {Boolean} visible if false, lotInfo ignored
+	 * @param {*} lotInfo An object containing all parking lot component data
+	 */
+	setLotInfo(visible, lotInfo)
+	{
+		this.lotInfoContainer.setVisible(visible);
+		// TODO: appear animation
+
+		if (!visible)
+		{
+			return;
+		}
+
+		this.lotInfoSpots.setText('Free spots: ' + lotInfo.freeSpots + '/' + lotInfo.totalSpots);
+		this.lotInfoAddress.setText(lotInfo.address);
+		this.lotInfoAvailabilityText.setText('Peak availability: ' + lotInfo.peakAvailability);
+		this.lotInfoOccupancyText.setText('Peak occupancy: ' + lotInfo.peakOccupancy);
+		this.lotInfoTurnoverText.setText('Average turnover rate: ' + lotInfo.averageTurnover);
+	}
+		// TODO: call this to hide lot info on pointer down around UI
 
 
 	/**
