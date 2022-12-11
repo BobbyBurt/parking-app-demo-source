@@ -77,7 +77,10 @@ class MapDrag extends UserComponent {
 				gameObject.y = -685;
 				console.log('OOB down @ ' + gameObject.y);
 			}
-				// TODO: outside of regular test of iphone dimensions on chrome, bottom bound suddenly moves map up. fix this
+				// TODO: Outside of regular test of iphone dimensions on chrome, bottom bound 
+				// suddenly moves map up. fix this.
+					// Coordinates seem to change at different resolutions or something? If so 
+					// then this bug is a fault of having hardcoded bounds.
 
 				// When using a different (bigger) map image, I will need to update these 
 				// hardcoded positions to reset to. Just couldn't figure out how to get them 
