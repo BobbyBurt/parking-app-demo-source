@@ -55,28 +55,28 @@ class MapDrag extends UserComponent {
 			// TODO: velocity of drag remains when user lets go
 			// this is low priority, since it's just a nice touch that will be tough to impliment
 
-		// bounds
-			this.bounds = _this.gameObject.getBounds();
-			if (this.bounds.right < _this.worldView.right)
-			{
-				gameObject.x = -2195;
-				console.log('OOB right @ ' + gameObject.x);
-			}
-			if (this.bounds.left > _this.worldView.left)
-			{
-				gameObject.x = 1797;
-				console.log('OOB left @ ' + gameObject.x);
-			}
-			if (this.bounds.top > _this.worldView.top)
-			{
-				gameObject.y = 412;
-				console.log('OOB up @ ' + gameObject.y);
-			}
-			if (this.bounds.bottom < _this.worldView.bottom)
-			{
-				gameObject.y = -685;
-				console.log('OOB down @ ' + gameObject.y);
-			}
+		// // bounds
+		// 	this.bounds = _this.gameObject.getBounds();
+		// 	if (this.bounds.right < _this.worldView.right)
+		// 	{
+		// 		gameObject.x = -2195;
+		// 		console.log('OOB right @ ' + gameObject.x);
+		// 	}
+		// 	if (this.bounds.left > _this.worldView.left)
+		// 	{
+		// 		gameObject.x = 1797;
+		// 		console.log('OOB left @ ' + gameObject.x);
+		// 	}
+		// 	if (this.bounds.top > _this.worldView.top)
+		// 	{
+		// 		gameObject.y = 412;
+		// 		console.log('OOB up @ ' + gameObject.y);
+		// 	}
+		// 	if (this.bounds.bottom < _this.worldView.bottom)
+		// 	{
+		// 		gameObject.y = -685;
+		// 		console.log('OOB down @ ' + gameObject.y);
+		// 	}
 				// TODO: Outside of regular test of iphone dimensions on chrome, bottom bound 
 				// suddenly moves map up. fix this.
 					// Coordinates seem to change at different resolutions or something? If so 

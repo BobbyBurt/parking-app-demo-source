@@ -269,6 +269,32 @@ class Map extends Phaser.Scene {
 		searchText.setStyle({ "color": "#c6c6c6ff", "fixedWidth":900,"fontFamily": "arial", "fontSize": "60px" });
 		searchBarContainer.add(searchText);
 
+		// zoomInButton
+		const zoomInButton = this.add.ellipse(115, 2098, 128, 128);
+		zoomInButton.isFilled = true;
+		zoomInButton.fillColor = 5131854;
+		uiLayer.add(zoomInButton);
+
+		// zoomOutButton
+		const zoomOutButton = this.add.ellipse(115, 2261, 128, 128);
+		zoomOutButton.isFilled = true;
+		zoomOutButton.fillColor = 5131854;
+		uiLayer.add(zoomOutButton);
+
+		// text_1
+		const text_1 = this.add.text(116, 2099, "", {});
+		text_1.setOrigin(0.5, 0.5);
+		text_1.text = "+";
+		text_1.setStyle({ "align": "center", "fontFamily": "arial", "fontSize": "100px" });
+		uiLayer.add(text_1);
+
+		// text
+		const text = this.add.text(114, 2256, "", {});
+		text.setOrigin(0.5, 0.5);
+		text.text = "-";
+		text.setStyle({ "align": "center", "fontFamily": "arial", "fontSize": "100px" });
+		uiLayer.add(text);
+
 		// lists
 		const lots = [lotTest, lotTest_1];
 
@@ -373,6 +399,14 @@ class Map extends Phaser.Scene {
 		searchBarContainerAlign.up = true;
 		searchBarContainerAlign.center = true;
 		searchBarContainerAlign.verticalOffset = 260;
+
+		// zoomInButton (components)
+		const zoomInButtonButton = new Button(zoomInButton);
+		zoomInButtonButton.eventToEmit = "zoomIn";
+
+		// zoomOutButton (components)
+		const zoomOutButtonButton = new Button(zoomOutButton);
+		zoomOutButtonButton.eventToEmit = "zoomOut";
 
 		this.mainLayer = mainLayer;
 		this.occupancyHeatmap = occupancyHeatmap;
@@ -521,6 +555,16 @@ class Map extends Phaser.Scene {
 				_this.setNormalView();
 			}
 		});
+
+		this.events.on('zoomOut', function ()
+		{
+			_this.cameras.main.zoomTo(_this.cameras.main.zoom * .7, 300, 'Sine.easeInOut');
+		});
+		this.events.on('zoomIn', function ()
+		{
+			_this.cameras.main.zoomTo(_this.cameras.main.zoom / .7, 300, 'Sine.easeInOut');
+		});
+			// TODO: add min & max zoom
 
 		this.lotInfoContainer.setName('lotInfoContainer');
 		this.lotInfoContainer.setSize(1000, 1100);

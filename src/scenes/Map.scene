@@ -587,6 +587,64 @@
                             "color": "#c6c6c6ff"
                         }
                     ]
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "56a9bd21-2ed9-4c42-ad2a-451e2e4b42a5",
+                    "label": "zoomInButton",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.eventToEmit": "zoomIn",
+                    "x": 115,
+                    "y": 2098,
+                    "isFilled": true,
+                    "fillColor": "#4e4e4e",
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "5aa05b94-eb65-4c2e-b1d9-e6a767c8ddad",
+                    "label": "zoomOutButton",
+                    "components": [
+                        "Button"
+                    ],
+                    "Button.eventToEmit": "zoomOut",
+                    "x": 115,
+                    "y": 2261,
+                    "isFilled": true,
+                    "fillColor": "#4e4e4e",
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "3c316d6b-3d4a-4237-a9e8-86f3294c8909",
+                    "label": "text_1",
+                    "components": [],
+                    "x": 116,
+                    "y": 2099,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "+",
+                    "align": "center",
+                    "fontFamily": "arial",
+                    "fontSize": "100px"
+                },
+                {
+                    "type": "Text",
+                    "id": "0ddee156-a852-4a9c-8caf-04174f0b40ca",
+                    "label": "text",
+                    "components": [],
+                    "x": 114,
+                    "y": 2256,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "-",
+                    "align": "center",
+                    "fontFamily": "arial",
+                    "fontSize": "100px"
                 }
             ]
         }
