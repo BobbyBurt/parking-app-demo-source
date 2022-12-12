@@ -247,6 +247,66 @@
                     "type": {
                         "id": "string"
                     }
+                },
+                {
+                    "name": "greenP",
+                    "label": "Green P",
+                    "tooltip": "Can this lot be reserved through Green P?",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "spotHero",
+                    "label": "SpotHero",
+                    "tooltip": "Can this lot be reserved through SpotHero?",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "cost",
+                    "label": "Hourly Parking Cost",
+                    "tooltip": "format \"15$ / hr\"",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "open",
+                    "label": "Currently Open",
+                    "tooltip": "Do the hours open include Tuesday @ 3:00?",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "hours",
+                    "label": "Open Hours",
+                    "tooltip": "format: \"closes 6:00pm\" or \"open 24/7\"",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "label",
+                    "label": "Label",
+                    "tooltip": "ex: \"Public parking lot\"",
+                    "defValue": "",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
                 }
             ]
         },

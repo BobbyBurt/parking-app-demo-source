@@ -4,7 +4,7 @@ class AdaptiveZoom
      * Incrementally zoom out until min view is visible
      * @param {Phaser.Cameras.Scene2D.Camera} camera 
      * @param {Number} minWidth 
-     * @param {Number} minHeight 
+     * @param {Number} minHeight DEPRECATED
      */
 	setAdaptiveZoom(camera, minWidth, minHeight)
     {

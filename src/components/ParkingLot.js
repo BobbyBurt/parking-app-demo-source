@@ -43,6 +43,18 @@ class ParkingLot extends UserComponent {
 	handicap = false;
 	/** @type {string} */
 	averageTurnover = "";
+	/** @type {boolean} */
+	greenP = false;
+	/** @type {boolean} */
+	spotHero = false;
+	/** @type {string} */
+	cost = "";
+	/** @type {boolean} */
+	open = false;
+	/** @type {string} */
+	hours = "";
+	/** @type {string} */
+	label = "";
 
 	/* START-USER-CODE */
 
@@ -56,7 +68,13 @@ class ParkingLot extends UserComponent {
 			peakAvailability: this.peakAvailability,
 			address: this.address,
 			handicap: this.handicap,
-			averageTurnover: this.averageTurnover
+			averageTurnover: this.averageTurnover,
+			greenP: this.greenP,
+			spotHero: this.spotHero,
+			cost: this.cost,
+			open: this.open,
+			hours: this.hours,
+			label: this.label
 		}
 
 		this.gameObject.setInteractive(this.gameObject.geom, Phaser.Geom.Polygon.Contains);

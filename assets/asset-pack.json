@@ -2,9 +2,29 @@
     "section1": {
         "files": [
             {
+                "url": "assets/applemaps-icon.png",
+                "type": "image",
+                "key": "applemaps-icon"
+            },
+            {
                 "url": "assets/button.png",
                 "type": "image",
                 "key": "button"
+            },
+            {
+                "url": "assets/googlemaps-icon.png",
+                "type": "image",
+                "key": "googlemaps-icon"
+            },
+            {
+                "url": "assets/greenP-icon.png",
+                "type": "image",
+                "key": "greenP-icon"
+            },
+            {
+                "url": "assets/handicap-icon.png",
+                "type": "image",
+                "key": "handicap-icon"
             },
             {
                 "url": "assets/heatmap-temp-1.png",
@@ -17,9 +37,29 @@
                 "key": "heatmap-temp-2"
             },
             {
+                "url": "assets/hours-icon.png",
+                "type": "image",
+                "key": "hours-icon"
+            },
+            {
+                "url": "assets/lot-info-view-icon.png",
+                "type": "image",
+                "key": "lot-info-view-icon"
+            },
+            {
                 "url": "assets/map-temp.png",
                 "type": "image",
                 "key": "map-temp"
+            },
+            {
+                "url": "assets/occupancy-view-icon.png",
+                "type": "image",
+                "key": "occupancy-view-icon"
+            },
+            {
+                "url": "assets/peak-icon.png",
+                "type": "image",
+                "key": "peak-icon"
             },
             {
                 "url": "src/components/PhysicsBody.js",
@@ -27,11 +67,41 @@
                 "key": "PhysicsBody"
             },
             {
+                "url": "assets/search-bar.png",
+                "type": "image",
+                "key": "search-bar"
+            },
+            {
                 "url": [
                     "assets/sfx/SMB-select-tick.wav"
                 ],
                 "type": "audio",
                 "key": "select"
+            },
+            {
+                "url": "assets/spothero-icon.png",
+                "type": "image",
+                "key": "spothero-icon"
+            },
+            {
+                "url": "assets/spots-icon.png",
+                "type": "image",
+                "key": "spots-icon"
+            },
+            {
+                "url": "assets/turnover-icon.png",
+                "type": "image",
+                "key": "turnover-icon"
+            },
+            {
+                "url": "assets/turnover-view-icon.png",
+                "type": "image",
+                "key": "turnover-view-icon"
+            },
+            {
+                "url": "assets/waze-icon.png",
+                "type": "image",
+                "key": "waze-icon"
             }
         ]
     },

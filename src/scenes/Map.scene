@@ -7,7 +7,7 @@
         "createMethodName": "editorCreate",
         "sceneKey": "Map",
         "borderWidth": 1170,
-        "borderHeight": 2532
+        "borderHeight": 2000
     },
     "displayList": [
         {
@@ -81,7 +81,10 @@
                             "ParkingLot.peakAvailability": "5:00pm",
                             "ParkingLot.address": "106 Humber College Blvd, Etobicoke, ON M9V 4E4",
                             "ParkingLot.handicap": true,
-                            "ParkingLot.averageTurnover": "50 min",
+                            "ParkingLot.averageTurnover": "50 mins",
+                            "ParkingLot.open": true,
+                            "ParkingLot.hours": "open 24/7",
+                            "ParkingLot.label": "Public parking lot",
                             "x": 232,
                             "y": 717,
                             "isFilled": true,
@@ -96,16 +99,64 @@
                                 "ParkingLot"
                             ],
                             "ParkingLot.totalSpots": 22,
-                            "ParkingLot.freeSpots": 6,
                             "ParkingLot.peakOccupancy": "2:00pm",
                             "ParkingLot.peakAvailability": "11:00am",
                             "ParkingLot.address": "413 Humber College Blvd, Etobicoke, ON M9V 4E4",
-                            "ParkingLot.averageTurnover": "15 min",
+                            "ParkingLot.averageTurnover": "15 mins",
+                            "ParkingLot.spotHero": true,
+                            "ParkingLot.cost": "15$ / hr",
+                            "ParkingLot.open": true,
+                            "ParkingLot.hours": "closes 6:30pm",
+                            "ParkingLot.label": "Green P Parking Garage",
                             "x": -682,
                             "y": 618,
                             "isFilled": true,
                             "fillColor": "#f1eb6a",
                             "points": "18.66017994061758 532.5989563943024 -40.168979296773045 254.64087785763388 631.6231217654316 47.83210126189667 725.9672771870842 304.8089745904525"
+                        },
+                        {
+                            "type": "Polygon",
+                            "id": "0310d98c-abad-42b5-9ab7-5759249722ad",
+                            "label": "lotTest_2",
+                            "components": [
+                                "ParkingLot"
+                            ],
+                            "ParkingLot.totalSpots": 100,
+                            "ParkingLot.peakOccupancy": "2:30pm",
+                            "ParkingLot.peakAvailability": "11:30am",
+                            "ParkingLot.address": "412 Humber College Blvd, Etobicoke, ON M9V 4E4",
+                            "ParkingLot.averageTurnover": "2 hrs",
+                            "ParkingLot.greenP": true,
+                            "ParkingLot.cost": "16$ / hr",
+                            "ParkingLot.hours": "closes 2:00pm",
+                            "ParkingLot.label": "Spot Parking Garage",
+                            "x": -580,
+                            "y": 956,
+                            "isFilled": true,
+                            "fillColor": "#f1eb6a",
+                            "points": "18.66017994061758 532.5989563943024 -40.168979296773045 254.64087785763388 631.6231217654316 47.83210126189667 725.9672771870842 304.8089745904525"
+                        },
+                        {
+                            "type": "Polygon",
+                            "id": "96777778-10fa-4aea-a92a-5aad5b95e734",
+                            "label": "lotTest_3",
+                            "components": [
+                                "ParkingLot"
+                            ],
+                            "ParkingLot.totalSpots": 10,
+                            "ParkingLot.freeSpots": 2,
+                            "ParkingLot.peakOccupancy": "1:00pm",
+                            "ParkingLot.peakAvailability": "5:00pm",
+                            "ParkingLot.address": "106 Humber College Blvd, Etobicoke, ON M9V 4E4",
+                            "ParkingLot.handicap": true,
+                            "ParkingLot.averageTurnover": "50 mins",
+                            "ParkingLot.hours": "open 24/7",
+                            "ParkingLot.label": "Public parking lot",
+                            "x": 864,
+                            "y": 497,
+                            "isFilled": true,
+                            "fillColor": "#f1eb6a",
+                            "points": "18.66017994061758 532.5989563943024 -90.11305535640798 255.90731013755897 438.0334973630689 79.54802215952583 532.3121845915389 343.649652018609"
                         }
                     ]
                 }
@@ -130,15 +181,56 @@
                     "Align.down": true,
                     "Align.center": true,
                     "x": -163,
-                    "y": 2551,
+                    "y": 2086,
                     "scaleX": 30,
                     "scaleY": 2.613718040817636,
                     "originY": 1,
-                    "visible": false,
                     "isFilled": true,
                     "fillColor": "#2e2e2e",
                     "width": 128,
                     "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "f6258a3d-eb12-4c01-b1f8-7467735bedb5",
+                    "label": "viewLabel",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.verticalOffset": -282,
+                    "x": 652,
+                    "y": 1785,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Occupancy view",
+                    "align": "center",
+                    "fontFamily": "arial",
+                    "fontSize": "50px",
+                    "color": "#FFDD00"
+                },
+                {
+                    "type": "Text",
+                    "id": "af196961-4a5c-4965-a797-98b457561277",
+                    "label": "viewDesc",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.verticalOffset": -225,
+                    "x": 672,
+                    "y": 1842,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Which general areas are busy",
+                    "align": "center",
+                    "fontFamily": "arial",
+                    "fontSize": "40px",
+                    "color": "#ffff"
                 },
                 {
                     "type": "Rectangle",
@@ -151,66 +243,15 @@
                     "Align.down": true,
                     "Align.center": true,
                     "x": 605,
-                    "y": 2546,
+                    "y": 1999,
                     "scaleX": 30,
-                    "scaleY": 1.3916874920778723,
+                    "scaleY": 1.2007289492199529,
                     "originY": 1,
                     "isFilled": true,
                     "fillColor": "#2e2e2e",
                     "strokeColor": "#747474",
                     "lineWidth": 3,
                     "isStroked": true,
-                    "width": 128,
-                    "height": 128
-                },
-                {
-                    "type": "Text",
-                    "id": "b70d1f77-4b54-4a1b-a024-bee01787fed1",
-                    "label": "dialogueText",
-                    "scope": "CLASS",
-                    "components": [
-                        "Button",
-                        "Align"
-                    ],
-                    "Button.eventToEmit": "textButton",
-                    "Align.center": true,
-                    "x": 576,
-                    "y": 1245,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "This is a dialogue box. In the final app, it will guide the user through the app as a solution, as well as explain the problem, etc. It's a gameobject that can be made to appear by code, and disappears on pointer down.",
-                    "paddingLeft": 50,
-                    "paddingTop": 50,
-                    "paddingRight": 50,
-                    "paddingBottom": 50,
-                    "fontFamily": "arial",
-                    "fontSize": "64px",
-                    "backgroundColor": "#52676cff",
-                    "wordWrapWidth": 1000,
-                    "wordWrapUseAdvanced": true
-                },
-                {
-                    "type": "Rectangle",
-                    "id": "cf2dc3fc-0d5b-4026-9ada-89a950a7e052",
-                    "label": "turnoverViewButton",
-                    "scope": "CLASS",
-                    "components": [
-                        "Button",
-                        "Align"
-                    ],
-                    "Button.eventToEmit": "turnoverView",
-                    "Align.down": true,
-                    "Align.center": true,
-                    "Align.horizontalOffset": -300,
-                    "x": 290,
-                    "y": 2540,
-                    "scaleX": 2.0471239809434234,
-                    "scaleY": 1.2020153222993333,
-                    "originY": 1,
-                    "isFilled": true,
-                    "fillColor": "#4e4e4e",
-                    "strokeColor": "#FFDD00",
-                    "lineWidth": 3,
                     "width": 128,
                     "height": 128
                 },
@@ -255,7 +296,7 @@
                     "Align.up": true,
                     "Align.center": true,
                     "scaleX": 30,
-                    "scaleY": 1.3916874920778723,
+                    "scaleY": 1.0181372105479631,
                     "originY": 0,
                     "isFilled": true,
                     "fillColor": "#2e2e2e",
@@ -271,14 +312,58 @@
                     ],
                     "Align.up": true,
                     "Align.center": true,
-                    "Align.verticalOffset": 90,
+                    "Align.verticalOffset": 70,
                     "texture": {
                         "key": "Spottr-logo"
                     },
                     "x": 543,
-                    "y": 87,
-                    "scaleX": 0.5372422073766504,
-                    "scaleY": 0.5372422073766504
+                    "y": 69,
+                    "scaleX": 0.4570156262809624,
+                    "scaleY": 0.4570156262809624
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "cf2dc3fc-0d5b-4026-9ada-89a950a7e052",
+                    "label": "turnoverViewButton",
+                    "scope": "CLASS",
+                    "components": [
+                        "Button",
+                        "Align"
+                    ],
+                    "Button.eventToEmit": "turnoverView",
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.horizontalOffset": -300,
+                    "x": 290,
+                    "y": 2022,
+                    "scaleX": 2.0471239809434234,
+                    "scaleY": 1.162895020111202,
+                    "originY": 1,
+                    "isFilled": true,
+                    "fillColor": "#2e2e2e",
+                    "strokeColor": "#FFDD00",
+                    "lineWidth": 3,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Image",
+                    "id": "4348f433-b1d2-4678-80ad-0cdc6c72c661",
+                    "label": "turnover_view_icon",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.horizontalOffset": -300,
+                    "Align.verticalOffset": -40,
+                    "texture": {
+                        "key": "turnover-view-icon"
+                    },
+                    "x": 474,
+                    "y": 2031,
+                    "originY": 1
                 },
                 {
                     "type": "Rectangle",
@@ -293,16 +378,34 @@
                     "Align.down": true,
                     "Align.center": true,
                     "x": 614,
-                    "y": 2534,
+                    "y": 2016,
                     "scaleX": 2.0471239809434234,
-                    "scaleY": 1.2020153222993333,
+                    "scaleY": 1.162895020111202,
                     "originY": 1,
                     "isFilled": true,
-                    "fillColor": "#4e4e4e",
+                    "fillColor": "#2e2e2e",
                     "strokeColor": "#FFDD00",
                     "lineWidth": 3,
                     "width": 128,
                     "height": 128
+                },
+                {
+                    "type": "Image",
+                    "id": "e8fada66-d7bb-42e6-9091-3cdcbc4b12ee",
+                    "label": "occupancy_view_icon",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.verticalOffset": -40,
+                    "texture": {
+                        "key": "occupancy-view-icon"
+                    },
+                    "x": 733,
+                    "y": 2025,
+                    "originY": 1
                 },
                 {
                     "type": "Rectangle",
@@ -318,16 +421,35 @@
                     "Align.center": true,
                     "Align.horizontalOffset": 300,
                     "x": 938,
-                    "y": 2530,
+                    "y": 2001,
                     "scaleX": 2.0471239809434234,
-                    "scaleY": 1.2020153222993333,
+                    "scaleY": 1.162895020111202,
                     "originY": 1,
                     "isFilled": true,
-                    "fillColor": "#4e4e4e",
+                    "fillColor": "#2e2e2e",
                     "strokeColor": "#FFDD00",
                     "lineWidth": 3,
                     "width": 128,
                     "height": 128
+                },
+                {
+                    "type": "Image",
+                    "id": "0ef31608-6bad-4c87-8dd5-f79cc2b72ed8",
+                    "label": "lot_info_view_icon",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.horizontalOffset": 300,
+                    "Align.verticalOffset": -40,
+                    "texture": {
+                        "key": "lot-info-view-icon"
+                    },
+                    "x": 942,
+                    "y": 1962,
+                    "originY": 1
                 },
                 {
                     "type": "Container",
@@ -337,11 +459,10 @@
                     "components": [
                         "Align"
                     ],
-                    "Align.middle": true,
+                    "Align.down": true,
                     "Align.center": true,
-                    "Align.verticalOffset": 300,
-                    "x": 2434,
-                    "visible": false,
+                    "x": 2500,
+                    "y": 1028,
                     "list": [
                         {
                             "type": "Rectangle",
@@ -349,10 +470,11 @@
                             "label": "lotInfoBox",
                             "scope": "CLASS",
                             "components": [],
+                            "y": -590,
                             "isFilled": true,
                             "fillColor": "#404040",
-                            "width": 1000,
-                            "height": 1100
+                            "width": 1050,
+                            "height": 1200
                         },
                         {
                             "type": "Text",
@@ -360,114 +482,15 @@
                             "label": "lotInfoAddress",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 44,
-                            "y": -488,
+                            "y": -1049,
                             "originX": 0.5,
                             "text": "107 Humber College Blvd, Etobicoke, ON M9V 4E4",
-                            "fixedWidth": 950,
+                            "fixedWidth": 900,
                             "fixedHeight": 100,
                             "fontFamily": "arial",
                             "fontSize": "40px",
                             "color": "#cbcbcbff",
-                            "wordWrapWidth": 950
-                        },
-                        {
-                            "type": "Rectangle",
-                            "id": "d76ae146-480f-49fd-b2c2-336e59c984cb",
-                            "label": "rectangle_1",
-                            "scope": "CLASS",
-                            "components": [],
-                            "x": 48,
-                            "y": -185,
-                            "scaleX": 7.737948387382009,
-                            "scaleY": 2.482453812100876,
-                            "isFilled": true,
-                            "fillColor": "#5e5e5e",
-                            "width": 128,
-                            "height": 128
-                        },
-                        {
-                            "type": "Text",
-                            "id": "b6bce9a8-6f8e-4570-a9a0-956d947e5698",
-                            "label": "lotInfoSpots",
-                            "scope": "CLASS",
-                            "components": [],
-                            "x": 50,
-                            "y": 104,
-                            "originX": 0.5,
-                            "text": "Free spots: x/y",
-                            "fixedWidth": 950,
-                            "fixedHeight": 100,
-                            "fontFamily": "arial",
-                            "fontSize": "50px",
-                            "color": "#ffffffff",
-                            "wordWrapWidth": 950
-                        },
-                        {
-                            "type": "Text",
-                            "id": "f000ea45-938f-4f22-9074-244c66176767",
-                            "label": "lotInfoTurnoverText",
-                            "scope": "CLASS",
-                            "components": [],
-                            "x": 46,
-                            "y": 173,
-                            "originX": 0.5,
-                            "text": "Average turnover rate: 1 hr",
-                            "fixedWidth": 950,
-                            "fixedHeight": 100,
-                            "fontFamily": "arial",
-                            "fontSize": "50px",
-                            "color": "#ffffffff",
-                            "wordWrapWidth": 950
-                        },
-                        {
-                            "type": "Text",
-                            "id": "43739ed2-804b-484d-a72d-f24064d0a429",
-                            "label": "lotInfoOccupancyText",
-                            "scope": "CLASS",
-                            "components": [],
-                            "x": 45,
-                            "y": 249,
-                            "originX": 0.5,
-                            "text": "Peak occupancy: 1:00pm",
-                            "fixedWidth": 950,
-                            "fixedHeight": 100,
-                            "fontFamily": "arial",
-                            "fontSize": "50px",
-                            "color": "#ffffffff",
-                            "wordWrapWidth": 950
-                        },
-                        {
-                            "type": "Text",
-                            "id": "0b19a57b-16fd-4cff-918a-06e310d20b1a",
-                            "label": "lotInfoAvailabilityText",
-                            "scope": "CLASS",
-                            "components": [],
-                            "x": 43,
-                            "y": 315,
-                            "originX": 0.5,
-                            "text": "Peak availability: 5:00pm",
-                            "fixedWidth": 950,
-                            "fixedHeight": 100,
-                            "fontFamily": "arial",
-                            "fontSize": "50px",
-                            "color": "#ffffffff",
-                            "wordWrapWidth": 950
-                        },
-                        {
-                            "type": "Rectangle",
-                            "id": "72c02119-40b3-4dfb-babf-892b9a416610",
-                            "label": "rectangle",
-                            "scope": "CLASS",
-                            "components": [],
-                            "x": 52,
-                            "y": 482,
-                            "scaleX": 7.737948387382009,
-                            "scaleY": 1.0472114846743532,
-                            "isFilled": true,
-                            "fillColor": "#5e5e5e",
-                            "width": 128,
-                            "height": 128
+                            "wordWrapWidth": 900
                         },
                         {
                             "type": "Text",
@@ -475,74 +498,334 @@
                             "label": "lotInfoHeader",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 71,
-                            "y": -320,
-                            "originX": 0.5,
+                            "x": -450,
+                            "y": -1139,
                             "text": "Public Parking lot",
                             "fixedWidth": 800,
                             "fontFamily": "arial",
-                            "fontSize": "50px"
+                            "fontSize": "60px"
                         },
                         {
-                            "type": "Ellipse",
-                            "id": "8a4fb093-3f94-4712-97ab-6fcd321447fd",
-                            "label": "lotInfoIcon",
+                            "type": "Text",
+                            "id": "acee65af-a447-45a2-a599-f06c0219ff08",
+                            "label": "lotInfoHoursLabel",
                             "scope": "CLASS",
                             "components": [],
-                            "x": -399,
-                            "y": -298,
-                            "scaleX": 0.38636524889129314,
-                            "scaleY": 0.38636524889129314,
-                            "isFilled": true,
-                            "fillColor": "#fcf80d",
-                            "width": 128,
-                            "height": 128
+                            "y": -912,
+                            "originX": 0.5,
+                            "text": "Hours of operation",
+                            "fixedWidth": 900,
+                            "fixedHeight": 50,
+                            "fontFamily": "arial",
+                            "fontSize": "40px",
+                            "color": "#cbcbcbff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "8dda85f8-bdf6-41b2-aec4-151e3c46d5ad",
+                            "label": "lotInfoHours",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": -852,
+                            "originX": 0.5,
+                            "text": "Open - closes 6:30pm",
+                            "fixedWidth": 700,
+                            "fixedHeight": 70,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0e0de9da-29a3-4dfd-8ba6-871406fcd787",
+                            "label": "lotInfoSpotsLabel",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": -730,
+                            "originX": 0.5,
+                            "text": "Available parking spots",
+                            "fixedWidth": 900,
+                            "fixedHeight": 50,
+                            "fontFamily": "arial",
+                            "fontSize": "40px",
+                            "color": "#cbcbcbff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "61198d5a-080f-4887-b71d-ef5f3f677a18",
+                            "label": "lotInfoSpots",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": -671,
+                            "originX": 0.5,
+                            "text": "5/30",
+                            "fixedWidth": 700,
+                            "fixedHeight": 70,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f41753b2-825e-403e-b6db-b8bda88483e6",
+                            "label": "lotInfoOccupancyText",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": -497,
+                            "originX": 0.5,
+                            "text": "12:30pm, 4:00pm",
+                            "fixedWidth": 700,
+                            "fixedHeight": 70,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "031b4590-c6bd-4d27-ac9c-f6cc941d7039",
+                            "label": "lotInfoOccupancyTextLabel",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": -556,
+                            "originX": 0.5,
+                            "text": "Peak availability, occupancy",
+                            "fixedWidth": 900,
+                            "fixedHeight": 50,
+                            "fontFamily": "arial",
+                            "fontSize": "40px",
+                            "color": "#cbcbcbff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "fe7afebb-f91c-4284-adfe-14dd9e9e0731",
+                            "label": "lotInfoTurnoverTextLabel",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": -379,
+                            "originX": 0.5,
+                            "text": "Average turnover time",
+                            "fixedWidth": 900,
+                            "fixedHeight": 50,
+                            "fontFamily": "arial",
+                            "fontSize": "40px",
+                            "color": "#cbcbcbff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ac7bcbfc-9324-41cf-9769-927317ce1c5f",
+                            "label": "lotInfoTurnoverText",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": -320,
+                            "originX": 0.5,
+                            "text": "30 mins",
+                            "fixedWidth": 700,
+                            "fixedHeight": 70,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ceb70fed-edd5-4cd1-a661-50f2c3335a1d",
+                            "label": "lotInfoDirectionsLabel",
+                            "scope": "CLASS",
+                            "components": [],
+                            "x": 11,
+                            "y": -200,
+                            "originX": 0.5,
+                            "text": "Get directions from",
+                            "fixedWidth": 900,
+                            "fixedHeight": 50,
+                            "fontFamily": "arial",
+                            "fontSize": "40px",
+                            "color": "#cbcbcbff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Text",
+                            "id": "9487af3c-abaf-416e-bee9-9dfd5dbcb075",
+                            "label": "lotIntoReserveLabel",
+                            "scope": "CLASS",
+                            "components": [],
+                            "x": 249,
+                            "y": -200,
+                            "originX": 0.5,
+                            "text": "Reserve from\n",
+                            "fixedHeight": 50,
+                            "fontFamily": "arial",
+                            "fontSize": "40px",
+                            "color": "#cbcbcbff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Image",
+                            "id": "f5c88994-37a7-4d4b-b7f6-ef950e5cd47e",
+                            "label": "handicap_icon",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "handicap-icon"
+                            },
+                            "x": 418,
+                            "y": -1095,
+                            "scaleX": 0.8504718768044597,
+                            "scaleY": 0.8504718768044597,
+                            "tintTopLeft": "",
+                            "tintTopRight": "",
+                            "tintBottomLeft": "",
+                            "tintBottomRight": ""
+                        },
+                        {
+                            "type": "Image",
+                            "id": "3be27a67-a91a-4496-98b4-4af13a71aa88",
+                            "label": "hours_icon",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "hours-icon"
+                            },
+                            "x": -420,
+                            "y": -822,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85,
+                            "tintTopLeft": "",
+                            "tintTopRight": "",
+                            "tintBottomLeft": "",
+                            "tintBottomRight": ""
+                        },
+                        {
+                            "type": "Image",
+                            "id": "469afc21-3ecc-4c5d-af10-3b8b89254ec2",
+                            "label": "spots_icon",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "spots-icon"
+                            },
+                            "x": -420,
+                            "y": -644,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Image",
+                            "id": "45b8ead2-3ab4-4d9b-a522-568b84e41c85",
+                            "label": "peak_icon",
+                            "components": [],
+                            "texture": {
+                                "key": "peak-icon"
+                            },
+                            "x": -420,
+                            "y": -468,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Image",
+                            "id": "48a8958b-a407-4692-86d9-662e0d1bacc0",
+                            "label": "turnover_icon",
+                            "components": [],
+                            "texture": {
+                                "key": "turnover-icon"
+                            },
+                            "x": -420,
+                            "y": -294,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0d64e046-af4c-4fa0-aa82-a2cd3ac3a35c",
+                            "label": "lotInfoCostText",
+                            "scope": "CLASS",
+                            "components": [],
+                            "x": 242,
+                            "y": -113,
+                            "text": "15$ / hr",
+                            "fixedWidth": 250,
+                            "fixedHeight": 70,
+                            "fontFamily": "arial",
+                            "fontSize": "50px",
+                            "color": "#ffffffff",
+                            "wordWrapWidth": 900
+                        },
+                        {
+                            "type": "Image",
+                            "id": "2a87d99d-a991-4331-bb3a-b1c243ea5f9a",
+                            "label": "applemaps_icon",
+                            "components": [],
+                            "texture": {
+                                "key": "applemaps-icon"
+                            },
+                            "x": -393,
+                            "y": -86,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Image",
+                            "id": "4282ed77-141d-4735-92ab-a7582afdd92a",
+                            "label": "googlemaps_icon",
+                            "components": [],
+                            "texture": {
+                                "key": "googlemaps-icon"
+                            },
+                            "x": -259,
+                            "y": -86,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Image",
+                            "id": "c1e7fbbc-d4cc-4c96-b6fa-2708f8e07b55",
+                            "label": "waze_icon",
+                            "components": [],
+                            "texture": {
+                                "key": "waze-icon"
+                            },
+                            "x": -126,
+                            "y": -86,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Image",
+                            "id": "7a49fb61-0003-48ad-a25c-d82fbcb52bb5",
+                            "label": "greenP_icon",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "greenP-icon"
+                            },
+                            "x": 172,
+                            "y": -86,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Image",
+                            "id": "366fb30b-9350-4283-bf28-6930016a9789",
+                            "label": "spothero_icon",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "spothero-icon"
+                            },
+                            "x": 172,
+                            "y": -86,
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
                         }
                     ]
-                },
-                {
-                    "type": "Text",
-                    "id": "f6258a3d-eb12-4c01-b1f8-7467735bedb5",
-                    "label": "viewLabel",
-                    "scope": "CLASS",
-                    "components": [
-                        "Align"
-                    ],
-                    "Align.down": true,
-                    "Align.center": true,
-                    "Align.verticalOffset": -282,
-                    "x": 652,
-                    "y": 2250,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "visible": false,
-                    "text": "Occupancy view",
-                    "align": "center",
-                    "fontFamily": "arial",
-                    "fontSize": "50px",
-                    "color": "#FFDD00"
-                },
-                {
-                    "type": "Text",
-                    "id": "af196961-4a5c-4965-a797-98b457561277",
-                    "label": "viewDesc",
-                    "scope": "CLASS",
-                    "components": [
-                        "Align"
-                    ],
-                    "Align.down": true,
-                    "Align.center": true,
-                    "Align.verticalOffset": -225,
-                    "x": 672,
-                    "y": 2307,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "visible": false,
-                    "text": "Which general areas are busy",
-                    "align": "center",
-                    "fontFamily": "arial",
-                    "fontSize": "40px",
-                    "color": "#ffff"
                 },
                 {
                     "type": "Container",
@@ -554,23 +837,20 @@
                     ],
                     "Align.up": true,
                     "Align.center": true,
-                    "Align.verticalOffset": 260,
+                    "Align.verticalOffset": 220,
                     "x": -1104,
                     "y": -157,
                     "list": [
                         {
-                            "type": "Rectangle",
-                            "id": "8fda6fcc-3d72-49eb-9779-755199be3a79",
-                            "label": "searchBar",
+                            "type": "Image",
+                            "id": "fe4bb8ea-5020-4f56-b6bb-8421c20caf3e",
+                            "label": "search_bar",
                             "components": [],
-                            "scaleX": 7.929312691721382,
-                            "scaleY": 0.8081882264567102,
-                            "isFilled": true,
-                            "fillColor": "#5b5b5b",
-                            "strokeColor": "#FFDD00",
-                            "lineWidth": 2,
-                            "width": 128,
-                            "height": 128
+                            "texture": {
+                                "key": "search-bar"
+                            },
+                            "scaleX": 0.962677011416493,
+                            "scaleY": 0.962677011416493
                         },
                         {
                             "type": "Text",
@@ -578,6 +858,7 @@
                             "label": "searchText",
                             "scope": "CLASS",
                             "components": [],
+                            "x": 49,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "Search for your destination",
@@ -589,62 +870,108 @@
                     ]
                 },
                 {
-                    "type": "Ellipse",
-                    "id": "56a9bd21-2ed9-4c42-ad2a-451e2e4b42a5",
-                    "label": "zoomInButton",
+                    "type": "Container",
+                    "id": "dd356af7-17de-48f9-9731-dff5fee412fd",
+                    "label": "zoomButtonContainer",
                     "components": [
-                        "Button"
+                        "Align"
                     ],
-                    "Button.eventToEmit": "zoomIn",
-                    "x": 115,
-                    "y": 2098,
-                    "isFilled": true,
-                    "fillColor": "#4e4e4e",
-                    "width": 128,
-                    "height": 128
-                },
-                {
-                    "type": "Ellipse",
-                    "id": "5aa05b94-eb65-4c2e-b1d9-e6a767c8ddad",
-                    "label": "zoomOutButton",
-                    "components": [
-                        "Button"
-                    ],
-                    "Button.eventToEmit": "zoomOut",
-                    "x": 115,
-                    "y": 2261,
-                    "isFilled": true,
-                    "fillColor": "#4e4e4e",
-                    "width": 128,
-                    "height": 128
-                },
-                {
-                    "type": "Text",
-                    "id": "3c316d6b-3d4a-4237-a9e8-86f3294c8909",
-                    "label": "text_1",
-                    "components": [],
+                    "Align.up": true,
+                    "Align.left": true,
+                    "Align.horizontalOffset": 115,
+                    "Align.verticalOffset": 560,
                     "x": 116,
-                    "y": 2099,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "+",
-                    "align": "center",
-                    "fontFamily": "arial",
-                    "fontSize": "100px"
+                    "y": 621,
+                    "list": [
+                        {
+                            "type": "Ellipse",
+                            "id": "56a9bd21-2ed9-4c42-ad2a-451e2e4b42a5",
+                            "label": "zoomInButton",
+                            "components": [
+                                "Button"
+                            ],
+                            "Button.eventToEmit": "zoomIn",
+                            "x": -1,
+                            "y": -166,
+                            "isFilled": true,
+                            "fillColor": "#656565",
+                            "lineWidth": 5,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Ellipse",
+                            "id": "5aa05b94-eb65-4c2e-b1d9-e6a767c8ddad",
+                            "label": "zoomOutButton",
+                            "components": [
+                                "Button"
+                            ],
+                            "Button.eventToEmit": "zoomOut",
+                            "x": -1,
+                            "y": -3,
+                            "isFilled": true,
+                            "fillColor": "#656565",
+                            "lineWidth": 5,
+                            "isStroked": true,
+                            "width": 128,
+                            "height": 128
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3c316d6b-3d4a-4237-a9e8-86f3294c8909",
+                            "label": "text_1",
+                            "components": [],
+                            "y": -165,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "+",
+                            "align": "center",
+                            "fontFamily": "arial",
+                            "fontSize": "80px"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0ddee156-a852-4a9c-8caf-04174f0b40ca",
+                            "label": "text",
+                            "components": [],
+                            "x": -2,
+                            "y": -8,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "-",
+                            "align": "center",
+                            "fontFamily": "arial",
+                            "fontSize": "80px"
+                        }
+                    ]
                 },
                 {
                     "type": "Text",
-                    "id": "0ddee156-a852-4a9c-8caf-04174f0b40ca",
-                    "label": "text",
-                    "components": [],
-                    "x": 114,
-                    "y": 2256,
+                    "id": "b70d1f77-4b54-4a1b-a024-bee01787fed1",
+                    "label": "dialogueText",
+                    "scope": "CLASS",
+                    "components": [
+                        "Button",
+                        "Align"
+                    ],
+                    "Button.eventToEmit": "textButton",
+                    "Align.middle": true,
+                    "Align.center": true,
+                    "x": 576,
+                    "y": 1245,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "-",
-                    "align": "center",
+                    "text": "This is a dialogue box. In the final app, it will guide the user through the app as a solution, as well as explain the problem, etc. It's a gameobject that can be made to appear by code, and disappears on pointer down.",
+                    "paddingLeft": 50,
+                    "paddingTop": 50,
+                    "paddingRight": 50,
+                    "paddingBottom": 50,
                     "fontFamily": "arial",
-                    "fontSize": "100px"
+                    "fontSize": "64px",
+                    "backgroundColor": "#52676cff",
+                    "wordWrapWidth": 1000,
+                    "wordWrapUseAdvanced": true
                 }
             ]
         }
@@ -662,7 +989,9 @@
             "label": "lots",
             "objectIds": [
                 "24f809a6-578a-4501-aac6-b29aaa54e5d6",
-                "457803e3-591f-4227-b42e-2c1cc403bf6e"
+                "457803e3-591f-4227-b42e-2c1cc403bf6e",
+                "0310d98c-abad-42b5-9ab7-5759249722ad",
+                "96777778-10fa-4aea-a92a-5aad5b95e734"
             ]
         }
     ]
