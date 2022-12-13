@@ -27,6 +27,16 @@
                 "key": "handicap-icon"
             },
             {
+                "url": "assets/heatmap-1.png",
+                "type": "image",
+                "key": "heatmap-1"
+            },
+            {
+                "url": "assets/heatmap-2.png",
+                "type": "image",
+                "key": "heatmap-2"
+            },
+            {
                 "url": "assets/heatmap-temp-1.png",
                 "type": "image",
                 "key": "heatmap-temp-1"
@@ -47,9 +57,19 @@
                 "key": "lot-info-view-icon"
             },
             {
+                "url": "assets/map.png",
+                "type": "image",
+                "key": "map"
+            },
+            {
                 "url": "assets/map-temp.png",
                 "type": "image",
                 "key": "map-temp"
+            },
+            {
+                "url": "assets/occupancy-graph.png",
+                "type": "image",
+                "key": "occupancy-graph"
             },
             {
                 "url": "assets/occupancy-view-icon.png",
@@ -87,6 +107,11 @@
                 "url": "assets/spots-icon.png",
                 "type": "image",
                 "key": "spots-icon"
+            },
+            {
+                "url": "assets/turnover-graph.png",
+                "type": "image",
+                "key": "turnover-graph"
             },
             {
                 "url": "assets/turnover-icon.png",

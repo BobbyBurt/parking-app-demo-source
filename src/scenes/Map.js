@@ -24,20 +24,20 @@ class Map extends Phaser.Scene {
 		mainLayer.add(mapContainer);
 
 		// mapTemp
-		const mapTemp = this.add.image(784, 1401, "map-temp");
+		const mapTemp = this.add.image(784, 1401, "map");
 		mapTemp.scaleX = 4.567640778523811;
 		mapTemp.scaleY = 4.567640778523811;
 		mapContainer.add(mapTemp);
 
 		// occupancyHeatmap
-		const occupancyHeatmap = this.add.image(784, 1401, "heatmap-temp-1");
+		const occupancyHeatmap = this.add.image(784, 1401, "heatmap-1");
 		occupancyHeatmap.scaleX = 4.567640778523811;
 		occupancyHeatmap.scaleY = 4.567640778523811;
 		occupancyHeatmap.visible = false;
 		mapContainer.add(occupancyHeatmap);
 
 		// turnoverHeatmap
-		const turnoverHeatmap = this.add.image(784, 1401, "heatmap-temp-2");
+		const turnoverHeatmap = this.add.image(784, 1401, "heatmap-2");
 		turnoverHeatmap.scaleX = 4.567640778523811;
 		turnoverHeatmap.scaleY = 4.567640778523811;
 		turnoverHeatmap.visible = false;
@@ -73,7 +73,7 @@ class Map extends Phaser.Scene {
 		// viewDescBar
 		const viewDescBar = this.add.rectangle(-163, 2086, 128, 128);
 		viewDescBar.scaleX = 30;
-		viewDescBar.scaleY = 2.613718040817636;
+		viewDescBar.scaleY = 2.8073720297612303;
 		viewDescBar.setOrigin(0.5, 1);
 		viewDescBar.isFilled = true;
 		viewDescBar.fillColor = 3026478;
@@ -420,6 +420,16 @@ class Map extends Phaser.Scene {
 		dialogueText.setWordWrapWidth(1000, true);
 		uiLayer.add(dialogueText);
 
+		// occupancy_graph
+		const occupancy_graph = this.add.image(623, 1595, "occupancy-graph");
+		occupancy_graph.flipY = true;
+		uiLayer.add(occupancy_graph);
+
+		// turnover_graph
+		const turnover_graph = this.add.image(704, 1686, "turnover-graph");
+		turnover_graph.flipY = true;
+		uiLayer.add(turnover_graph);
+
 		// lists
 		const lots = [lotTest, lotTest_1, lotTest_2, lotTest_3];
 
@@ -486,13 +496,13 @@ class Map extends Phaser.Scene {
 		const viewLabelAlign = new Align(viewLabel);
 		viewLabelAlign.down = true;
 		viewLabelAlign.center = true;
-		viewLabelAlign.verticalOffset = -282;
+		viewLabelAlign.verticalOffset = -302;
 
 		// viewDesc (components)
 		const viewDescAlign = new Align(viewDesc);
 		viewDescAlign.down = true;
 		viewDescAlign.center = true;
-		viewDescAlign.verticalOffset = -225;
+		viewDescAlign.verticalOffset = -245;
 
 		// bottomBar (components)
 		const bottomBarAlign = new Align(bottomBar);
@@ -522,6 +532,7 @@ class Map extends Phaser.Scene {
 		turnoverViewButtonAlign.down = true;
 		turnoverViewButtonAlign.center = true;
 		turnoverViewButtonAlign.horizontalOffset = -300;
+		turnoverViewButtonAlign.verticalOffset = -1;
 
 		// turnover_view_icon (components)
 		const turnover_view_iconAlign = new Align(turnover_view_icon);
@@ -536,6 +547,7 @@ class Map extends Phaser.Scene {
 		const occupancyViewButtonAlign = new Align(occupancyViewButton);
 		occupancyViewButtonAlign.down = true;
 		occupancyViewButtonAlign.center = true;
+		occupancyViewButtonAlign.verticalOffset = -1;
 
 		// occupancy_view_icon (components)
 		const occupancy_view_iconAlign = new Align(occupancy_view_icon);
@@ -550,6 +562,7 @@ class Map extends Phaser.Scene {
 		lotViewButtonAlign.down = true;
 		lotViewButtonAlign.center = true;
 		lotViewButtonAlign.horizontalOffset = 300;
+		lotViewButtonAlign.verticalOffset = -1;
 
 		// lot_info_view_icon (components)
 		const lot_info_view_iconAlign = new Align(lot_info_view_icon);
@@ -591,6 +604,18 @@ class Map extends Phaser.Scene {
 		dialogueTextAlign.middle = true;
 		dialogueTextAlign.center = true;
 
+		// occupancy_graph (components)
+		const occupancy_graphAlign = new Align(occupancy_graph);
+		occupancy_graphAlign.down = true;
+		occupancy_graphAlign.center = true;
+		occupancy_graphAlign.verticalOffset = -374;
+
+		// turnover_graph (components)
+		const turnover_graphAlign = new Align(turnover_graph);
+		turnover_graphAlign.down = true;
+		turnover_graphAlign.center = true;
+		turnover_graphAlign.verticalOffset = -374;
+
 		this.mainLayer = mainLayer;
 		this.occupancyHeatmap = occupancyHeatmap;
 		this.turnoverHeatmap = turnoverHeatmap;
@@ -627,6 +652,8 @@ class Map extends Phaser.Scene {
 		this.searchBarContainer = searchBarContainer;
 		this.searchText = searchText;
 		this.dialogueText = dialogueText;
+		this.occupancy_graph = occupancy_graph;
+		this.turnover_graph = turnover_graph;
 		this.lots = lots;
 
 		this.events.emit("scene-awake");
@@ -704,6 +731,10 @@ class Map extends Phaser.Scene {
 	searchText;
 	/** @type {Phaser.GameObjects.Text} */
 	dialogueText;
+	/** @type {Phaser.GameObjects.Image} */
+	occupancy_graph;
+	/** @type {Phaser.GameObjects.Image} */
+	turnover_graph;
 	/** @type {Phaser.GameObjects.Polygon[]} */
 	lots;
 
@@ -850,6 +881,10 @@ class Map extends Phaser.Scene {
 		}
 		this.mapView = 'normal';
 
+	// graph visual
+		this.turnover_graph.setVisible(false);
+		this.occupancy_graph.setVisible(false);
+
 	// button visual
 		this.lot_info_view_icon.setTint(0xffffff);
 		this.turnover_view_icon.setTint(0xffffff);
@@ -873,6 +908,10 @@ class Map extends Phaser.Scene {
 			return;
 		}
 		this.mapView = 'occupancy'
+
+	// graph visual
+		this.turnover_graph.setVisible(false);
+		this.occupancy_graph.setVisible(true);
 
 	// button visual
 		this.lot_info_view_icon.setTint(0xffffff);
@@ -900,6 +939,10 @@ class Map extends Phaser.Scene {
 		}
 		this.mapView = 'turnover'
 
+	// graph visual
+		this.turnover_graph.setVisible(true);
+		this.occupancy_graph.setVisible(false);
+
 	// button visual
 		this.lot_info_view_icon.setTint(0xffffff);
 		this.turnover_view_icon.setTint(0xFFDD00);
@@ -924,6 +967,10 @@ class Map extends Phaser.Scene {
 		}
 		this.mapView = 'lot'
 
+	// graph visual
+		this.turnover_graph.setVisible(false);
+		this.occupancy_graph.setVisible(false);
+	
 	// button visual
 		this.lot_info_view_icon.setTint(0xFFDD00);
 		this.turnover_view_icon.setTint(0xffffff);
@@ -1035,7 +1082,7 @@ class Map extends Phaser.Scene {
 		this.cameras.main.ignore(this.uiLayer.getChildren());
 		this.cameras.main.setName('main');
 		this.cameras.main.setViewport(0, 0, this.scale.width, this.scale.height);
-		this.cameras.main.setBackgroundColor(0x242424);
+		this.cameras.main.setBackgroundColor(0xffffff);
 
 	// UI
 		this.UICam = this.cameras.add(0, 0, this.cameras.main.width, this.cameras.main.height);

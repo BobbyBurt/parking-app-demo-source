@@ -31,7 +31,7 @@
                             "label": "mapTemp",
                             "components": [],
                             "texture": {
-                                "key": "map-temp"
+                                "key": "map"
                             },
                             "x": 784,
                             "y": 1401,
@@ -45,7 +45,7 @@
                             "scope": "CLASS",
                             "components": [],
                             "texture": {
-                                "key": "heatmap-temp-1"
+                                "key": "heatmap-1"
                             },
                             "x": 784,
                             "y": 1401,
@@ -60,7 +60,7 @@
                             "scope": "CLASS",
                             "components": [],
                             "texture": {
-                                "key": "heatmap-temp-2"
+                                "key": "heatmap-2"
                             },
                             "x": 784,
                             "y": 1401,
@@ -183,7 +183,7 @@
                     "x": -163,
                     "y": 2086,
                     "scaleX": 30,
-                    "scaleY": 2.613718040817636,
+                    "scaleY": 2.8073720297612303,
                     "originY": 1,
                     "isFilled": true,
                     "fillColor": "#2e2e2e",
@@ -200,7 +200,7 @@
                     ],
                     "Align.down": true,
                     "Align.center": true,
-                    "Align.verticalOffset": -282,
+                    "Align.verticalOffset": -302,
                     "x": 652,
                     "y": 1785,
                     "originX": 0.5,
@@ -221,7 +221,7 @@
                     ],
                     "Align.down": true,
                     "Align.center": true,
-                    "Align.verticalOffset": -225,
+                    "Align.verticalOffset": -245,
                     "x": 672,
                     "y": 1842,
                     "originX": 0.5,
@@ -334,6 +334,7 @@
                     "Align.down": true,
                     "Align.center": true,
                     "Align.horizontalOffset": -300,
+                    "Align.verticalOffset": -1,
                     "x": 290,
                     "y": 2022,
                     "scaleX": 2.0471239809434234,
@@ -377,6 +378,7 @@
                     "Button.eventToEmit": "occupancyView",
                     "Align.down": true,
                     "Align.center": true,
+                    "Align.verticalOffset": -1,
                     "x": 614,
                     "y": 2016,
                     "scaleX": 2.0471239809434234,
@@ -420,6 +422,7 @@
                     "Align.down": true,
                     "Align.center": true,
                     "Align.horizontalOffset": 300,
+                    "Align.verticalOffset": -1,
                     "x": 938,
                     "y": 2001,
                     "scaleX": 2.0471239809434234,
@@ -972,6 +975,42 @@
                     "backgroundColor": "#52676cff",
                     "wordWrapWidth": 1000,
                     "wordWrapUseAdvanced": true
+                },
+                {
+                    "type": "Image",
+                    "id": "d2241bbe-8601-4635-8200-76d9c01b7800",
+                    "label": "occupancy_graph",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.verticalOffset": -374,
+                    "texture": {
+                        "key": "occupancy-graph"
+                    },
+                    "x": 623,
+                    "y": 1595,
+                    "flipY": true
+                },
+                {
+                    "type": "Image",
+                    "id": "df993283-1d4a-4747-88d1-24a1b9231cab",
+                    "label": "turnover_graph",
+                    "scope": "CLASS",
+                    "components": [
+                        "Align"
+                    ],
+                    "Align.down": true,
+                    "Align.center": true,
+                    "Align.verticalOffset": -374,
+                    "texture": {
+                        "key": "turnover-graph"
+                    },
+                    "x": 704,
+                    "y": 1686,
+                    "flipY": true
                 }
             ]
         }
