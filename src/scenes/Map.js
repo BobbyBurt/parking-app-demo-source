@@ -44,28 +44,171 @@ class Map extends Phaser.Scene {
 		mapContainer.add(turnoverHeatmap);
 
 		// lotTest
-		const lotTest = this.add.polygon(232, 717, "18.66017994061758 532.5989563943024 -90.11305535640798 255.90731013755897 438.0334973630689 79.54802215952583 532.3121845915389 343.649652018609");
+		const lotTest = this.add.polygon(-1139.0662034334496, -311.47521513579414, "178.1652839272125 894.4735106476622 -57.489419124444794 105.30427252118207 293.25246448732423 -18.003420936080488 506.985799813246 647.8581237331372");
+		lotTest.setOrigin(0, 0);
+		lotTest.visible = false;
 		lotTest.isFilled = true;
 		lotTest.fillColor = 15854442;
+		lotTest.fillAlpha = 0.5;
+		lotTest.isStroked = true;
+		lotTest.strokeColor = 15854442;
+		lotTest.lineWidth = 8;
 		mapContainer.add(lotTest);
 
 		// lotTest_1
-		const lotTest_1 = this.add.polygon(-682, 618, "18.66017994061758 532.5989563943024 -40.168979296773045 254.64087785763388 631.6231217654316 47.83210126189667 725.9672771870842 304.8089745904525");
+		const lotTest_1 = this.add.polygon(-1243, 651, "-26.6735314398436 228.21026272784377 -57.489419124444794 105.30427252118207 293.25246448732423 -18.003420936080488 652.8888680579587 -297.9025626898097 683.0307486808451 -155.41367247252856 567.9435681207334 -10.184611289530494");
+		lotTest_1.setOrigin(0, 0);
+		lotTest_1.visible = false;
 		lotTest_1.isFilled = true;
 		lotTest_1.fillColor = 15854442;
+		lotTest_1.fillAlpha = 0.5;
+		lotTest_1.isStroked = true;
+		lotTest_1.strokeColor = 15854442;
 		mapContainer.add(lotTest_1);
 
 		// lotTest_2
-		const lotTest_2 = this.add.polygon(-580, 956, "18.66017994061758 532.5989563943024 -40.168979296773045 254.64087785763388 631.6231217654316 47.83210126189667 725.9672771870842 304.8089745904525");
+		const lotTest_2 = this.add.polygon(-431, -544, "62.5138356935276 503.8142899924124 -57.489419124444794 105.30427252118207 431.2369848238679 -42.269361251256214 554.9225981397416 333.45486033092607");
+		lotTest_2.setOrigin(0, 0);
+		lotTest_2.visible = false;
 		lotTest_2.isFilled = true;
 		lotTest_2.fillColor = 15854442;
+		lotTest_2.fillAlpha = 0.5;
+		lotTest_2.isStroked = true;
+		lotTest_2.strokeColor = 15854442;
+		lotTest_2.lineWidth = 8;
 		mapContainer.add(lotTest_2);
 
 		// lotTest_3
-		const lotTest_3 = this.add.polygon(864, 497, "18.66017994061758 532.5989563943024 -90.11305535640798 255.90731013755897 438.0334973630689 79.54802215952583 532.3121845915389 343.649652018609");
+		const lotTest_3 = this.add.polygon(-721, -454, "-4.496893840099233 324.44306612165053 -57.489419124444794 105.30427252118207 179.8646807250709 25.730641509729253 249.87540524349004 224.09436097858324");
+		lotTest_3.setOrigin(0, 0);
+		lotTest_3.visible = false;
 		lotTest_3.isFilled = true;
 		lotTest_3.fillColor = 15854442;
+		lotTest_3.fillAlpha = 0.5;
+		lotTest_3.isStroked = true;
+		lotTest_3.strokeColor = 15854442;
+		lotTest_3.lineWidth = 8;
 		mapContainer.add(lotTest_3);
+
+		// lotTest_4
+		const lotTest_4 = this.add.polygon(-208.78660583496094, 878.7864379882812, "-25.37873330182188 763.0579066229473 -130.39482007945043 392.00106667532623 198.65558515711908 326.65772379146847 294.3369086656251 651.0407473934767");
+		lotTest_4.setOrigin(0, 0);
+		lotTest_4.visible = false;
+		lotTest_4.isFilled = true;
+		lotTest_4.fillColor = 15854442;
+		lotTest_4.fillAlpha = 0.5;
+		lotTest_4.isStroked = true;
+		lotTest_4.strokeColor = 15854442;
+		lotTest_4.lineWidth = 8;
+		mapContainer.add(lotTest_4);
+
+		// lotTest_5
+		const lotTest_5 = this.add.polygon(868, -920, "-4.496893840099233 324.44306612165053 -57.489419124444794 105.30427252118207 179.8646807250709 25.730641509729253 249.87540524349004 224.09436097858324");
+		lotTest_5.setOrigin(0, 0);
+		lotTest_5.visible = false;
+		lotTest_5.isFilled = true;
+		lotTest_5.fillColor = 15854442;
+		lotTest_5.fillAlpha = 0.5;
+		lotTest_5.isStroked = true;
+		lotTest_5.strokeColor = 15854442;
+		lotTest_5.lineWidth = 8;
+		mapContainer.add(lotTest_5);
+
+		// lotTest_6
+		const lotTest_6 = this.add.polygon(770, -1309, "42.01066343436344 400.9902418546145 -57.489419124444794 105.30427252118207 179.8646807250709 25.730641509729253 278.1515365603568 325.8545094963439");
+		lotTest_6.setOrigin(0, 0);
+		lotTest_6.visible = false;
+		lotTest_6.isFilled = true;
+		lotTest_6.fillColor = 15854442;
+		lotTest_6.fillAlpha = 0.5;
+		lotTest_6.isStroked = true;
+		lotTest_6.strokeColor = 15854442;
+		lotTest_6.lineWidth = 8;
+		mapContainer.add(lotTest_6);
+
+		// lotTest_7
+		const lotTest_7 = this.add.polygon(34, -1080, "42.01066343436344 400.9902418546145 -57.489419124444794 105.30427252118207 179.8646807250709 25.730641509729253 278.1515365603568 325.8545094963439");
+		lotTest_7.setOrigin(0, 0);
+		lotTest_7.visible = false;
+		lotTest_7.isFilled = true;
+		lotTest_7.fillColor = 15854442;
+		lotTest_7.fillAlpha = 0.5;
+		lotTest_7.isStroked = true;
+		lotTest_7.strokeColor = 15854442;
+		lotTest_7.lineWidth = 8;
+		mapContainer.add(lotTest_7);
+
+		// lotTest_8
+		const lotTest_8 = this.add.polygon(-50, -198, "30.80816333989305 356.9403195983069 -57.489419124444794 105.30427252118207 179.8646807250709 25.730641509729253 255.3392064371975 278.66344218823747");
+		lotTest_8.setOrigin(0, 0);
+		lotTest_8.visible = false;
+		lotTest_8.isFilled = true;
+		lotTest_8.fillColor = 15854442;
+		lotTest_8.fillAlpha = 0.5;
+		lotTest_8.isStroked = true;
+		lotTest_8.strokeColor = 15854442;
+		lotTest_8.lineWidth = 8;
+		mapContainer.add(lotTest_8);
+
+		// lotTest_9
+		const lotTest_9 = this.add.polygon(1494, 829, "-48.674027317745185 725.5871337730171 -130.39482007945043 392.00106667532623 198.65558515711908 326.65772379146847 292.0890122508374 621.5880242942937");
+		lotTest_9.setOrigin(0, 0);
+		lotTest_9.visible = false;
+		lotTest_9.isFilled = true;
+		lotTest_9.fillColor = 15854442;
+		lotTest_9.fillAlpha = 0.5;
+		lotTest_9.isStroked = true;
+		lotTest_9.strokeColor = 15854442;
+		lotTest_9.lineWidth = 8;
+		mapContainer.add(lotTest_9);
+
+		// lotTest_10
+		const lotTest_10 = this.add.polygon(1018, 986, "-48.674027317745185 725.5871337730171 -130.39482007945043 392.00106667532623 198.65558515711908 326.65772379146847 292.0890122508374 621.5880242942937");
+		lotTest_10.setOrigin(0, 0);
+		lotTest_10.visible = false;
+		lotTest_10.isFilled = true;
+		lotTest_10.fillColor = 15854442;
+		lotTest_10.fillAlpha = 0.5;
+		lotTest_10.isStroked = true;
+		lotTest_10.strokeColor = 15854442;
+		lotTest_10.lineWidth = 8;
+		mapContainer.add(lotTest_10);
+
+		// lotTest_11
+		const lotTest_11 = this.add.polygon(208, 436, "294.0758885427109 847.1904289730971 117.69001065997304 767.6438565946075 41.60198490663515 487.50157995731786 -127.63345028381859 522.5015781689235 -224.7061052300475 113.97854444093184 107.3143707845179 41.34906531274561 292.0890122508374 621.5880242942937");
+		lotTest_11.setOrigin(0, 0);
+		lotTest_11.visible = false;
+		lotTest_11.isFilled = true;
+		lotTest_11.fillColor = 15854442;
+		lotTest_11.fillAlpha = 0.5;
+		lotTest_11.isStroked = true;
+		lotTest_11.strokeColor = 15854442;
+		lotTest_11.lineWidth = 8;
+		mapContainer.add(lotTest_11);
+
+		// lotTest_12
+		const lotTest_12 = this.add.polygon(45, 107, "128.15608385590755 308.6740466554497 49.717892764442084 54.344154328576735 179.8646807250709 25.730641509729253 255.3392064371975 278.66344218823747");
+		lotTest_12.setOrigin(0, 0);
+		lotTest_12.visible = false;
+		lotTest_12.isFilled = true;
+		lotTest_12.fillColor = 15854442;
+		lotTest_12.fillAlpha = 0.5;
+		lotTest_12.isStroked = true;
+		lotTest_12.strokeColor = 15854442;
+		lotTest_12.lineWidth = 8;
+		mapContainer.add(lotTest_12);
+
+		// lotTest_13
+		const lotTest_13 = this.add.polygon(-334, 470, "-25.37873330182188 763.0579066229473 -222.0717596096456 147.4614127012684 32.543527777651775 -116.24727780700385 318.0763857762638 696.7029612081526");
+		lotTest_13.setOrigin(0, 0);
+		lotTest_13.visible = false;
+		lotTest_13.isFilled = true;
+		lotTest_13.fillColor = 15854442;
+		lotTest_13.fillAlpha = 0.5;
+		lotTest_13.isStroked = true;
+		lotTest_13.strokeColor = 15854442;
+		lotTest_13.lineWidth = 8;
+		mapContainer.add(lotTest_13);
 
 		// uiLayer
 		const uiLayer = this.add.layer();
@@ -73,8 +216,9 @@ class Map extends Phaser.Scene {
 		// viewDescBar
 		const viewDescBar = this.add.rectangle(-163, 2086, 128, 128);
 		viewDescBar.scaleX = 30;
-		viewDescBar.scaleY = 2.8073720297612303;
+		viewDescBar.scaleY = 2.6478738721845354;
 		viewDescBar.setOrigin(0.5, 1);
+		viewDescBar.visible = false;
 		viewDescBar.isFilled = true;
 		viewDescBar.fillColor = 3026478;
 		uiLayer.add(viewDescBar);
@@ -82,6 +226,7 @@ class Map extends Phaser.Scene {
 		// viewLabel
 		const viewLabel = this.add.text(652, 1785, "", {});
 		viewLabel.setOrigin(0.5, 0.5);
+		viewLabel.visible = false;
 		viewLabel.text = "Occupancy view";
 		viewLabel.setStyle({ "align": "center", "color": "#FFDD00", "fontFamily": "arial", "fontSize": "50px" });
 		uiLayer.add(viewLabel);
@@ -89,6 +234,7 @@ class Map extends Phaser.Scene {
 		// viewDesc
 		const viewDesc = this.add.text(672, 1842, "", {});
 		viewDesc.setOrigin(0.5, 0.5);
+		viewDesc.visible = false;
 		viewDesc.text = "Which general areas are busy";
 		viewDesc.setStyle({ "align": "center", "color": "#ffff", "fontFamily": "arial", "fontSize": "40px" });
 		uiLayer.add(viewDesc);
@@ -415,7 +561,7 @@ class Map extends Phaser.Scene {
 		const dialogueText = this.add.text(576, 1245, "", {});
 		dialogueText.setOrigin(0.5, 0.5);
 		dialogueText.text = "This is a dialogue box. In the final app, it will guide the user through the app as a solution, as well as explain the problem, etc. It's a gameobject that can be made to appear by code, and disappears on pointer down.";
-		dialogueText.setStyle({ "backgroundColor": "#52676cff", "fontFamily": "arial", "fontSize": "64px" });
+		dialogueText.setStyle({ "backgroundColor": "#4c4c4cff", "fontFamily": "arial", "fontSize": "64px" });
 		dialogueText.setPadding({"left":50,"top":50,"right":50,"bottom":50});
 		dialogueText.setWordWrapWidth(1000, true);
 		uiLayer.add(dialogueText);
@@ -423,68 +569,208 @@ class Map extends Phaser.Scene {
 		// occupancy_graph
 		const occupancy_graph = this.add.image(623, 1595, "occupancy-graph");
 		occupancy_graph.flipY = true;
+		occupancy_graph.visible = false;
 		uiLayer.add(occupancy_graph);
 
 		// turnover_graph
 		const turnover_graph = this.add.image(704, 1686, "turnover-graph");
 		turnover_graph.flipY = true;
+		turnover_graph.visible = false;
 		uiLayer.add(turnover_graph);
 
 		// lists
-		const lots = [lotTest, lotTest_1, lotTest_2, lotTest_3];
+		const lots = [lotTest, lotTest_13, lotTest_12, lotTest_11, lotTest_10, lotTest_9, lotTest_8, lotTest_7, lotTest_6, lotTest_5, lotTest_4, lotTest_3, lotTest_2, lotTest_1];
 
 		// mapContainer (components)
 		new MapDrag(mapContainer);
 
 		// lotTest (components)
 		const lotTestParkingLot = new ParkingLot(lotTest);
-		lotTestParkingLot.totalSpots = 10;
-		lotTestParkingLot.freeSpots = 2;
-		lotTestParkingLot.peakOccupancy = "1:00pm";
-		lotTestParkingLot.peakAvailability = "5:00pm";
-		lotTestParkingLot.address = "106 Humber College Blvd, Etobicoke, ON M9V 4E4";
+		lotTestParkingLot.totalSpots = 100;
+		lotTestParkingLot.freeSpots = 9;
+		lotTestParkingLot.peakOccupancy = "3:00pm";
+		lotTestParkingLot.peakAvailability = "11:00pm";
+		lotTestParkingLot.address = "Armoury St, Toronto, ON M5G 1R3";
 		lotTestParkingLot.handicap = true;
-		lotTestParkingLot.averageTurnover = "50 mins";
+		lotTestParkingLot.averageTurnover = "90 mins";
+		lotTestParkingLot.greenP = true;
+		lotTestParkingLot.cost = "15$ / hr";
 		lotTestParkingLot.open = true;
 		lotTestParkingLot.hours = "open 24/7";
-		lotTestParkingLot.label = "Public parking lot";
+		lotTestParkingLot.label = "Green P garage";
 
 		// lotTest_1 (components)
 		const lotTest_1ParkingLot = new ParkingLot(lotTest_1);
-		lotTest_1ParkingLot.totalSpots = 22;
-		lotTest_1ParkingLot.peakOccupancy = "2:00pm";
-		lotTest_1ParkingLot.peakAvailability = "11:00am";
-		lotTest_1ParkingLot.address = "413 Humber College Blvd, Etobicoke, ON M9V 4E4";
-		lotTest_1ParkingLot.averageTurnover = "15 mins";
-		lotTest_1ParkingLot.spotHero = true;
-		lotTest_1ParkingLot.cost = "15$ / hr";
-		lotTest_1ParkingLot.open = true;
-		lotTest_1ParkingLot.hours = "closes 6:30pm";
-		lotTest_1ParkingLot.label = "Green P Parking Garage";
+		lotTest_1ParkingLot.totalSpots = 100;
+		lotTest_1ParkingLot.freeSpots = 33;
+		lotTest_1ParkingLot.peakOccupancy = "1:00pm";
+		lotTest_1ParkingLot.peakAvailability = "5:00pm";
+		lotTest_1ParkingLot.address = "75 Elizabeth St, Toronto, ON M5G 1P4";
+		lotTest_1ParkingLot.handicap = true;
+		lotTest_1ParkingLot.averageTurnover = "60 mins";
+		lotTest_1ParkingLot.hours = "construction";
+		lotTest_1ParkingLot.label = "Public parking lot";
 
 		// lotTest_2 (components)
 		const lotTest_2ParkingLot = new ParkingLot(lotTest_2);
-		lotTest_2ParkingLot.totalSpots = 100;
-		lotTest_2ParkingLot.peakOccupancy = "2:30pm";
-		lotTest_2ParkingLot.peakAvailability = "11:30am";
-		lotTest_2ParkingLot.address = "412 Humber College Blvd, Etobicoke, ON M9V 4E4";
-		lotTest_2ParkingLot.averageTurnover = "2 hrs";
-		lotTest_2ParkingLot.greenP = true;
-		lotTest_2ParkingLot.cost = "16$ / hr";
-		lotTest_2ParkingLot.hours = "closes 2:00pm";
-		lotTest_2ParkingLot.label = "Spot Parking Garage";
+		lotTest_2ParkingLot.totalSpots = 120;
+		lotTest_2ParkingLot.freeSpots = 28;
+		lotTest_2ParkingLot.peakOccupancy = "12:30pm";
+		lotTest_2ParkingLot.peakAvailability = "5:00pm";
+		lotTest_2ParkingLot.address = "570 Bay St., Toronto, ON M5G 0B2";
+		lotTest_2ParkingLot.handicap = true;
+		lotTest_2ParkingLot.averageTurnover = "50 mins";
+		lotTest_2ParkingLot.spotHero = true;
+		lotTest_2ParkingLot.cost = "10$ / hr";
+		lotTest_2ParkingLot.open = true;
+		lotTest_2ParkingLot.hours = "closes 7:30pm";
+		lotTest_2ParkingLot.label = "Public parking lot";
 
 		// lotTest_3 (components)
 		const lotTest_3ParkingLot = new ParkingLot(lotTest_3);
-		lotTest_3ParkingLot.totalSpots = 10;
-		lotTest_3ParkingLot.freeSpots = 2;
-		lotTest_3ParkingLot.peakOccupancy = "1:00pm";
-		lotTest_3ParkingLot.peakAvailability = "5:00pm";
-		lotTest_3ParkingLot.address = "106 Humber College Blvd, Etobicoke, ON M9V 4E4";
+		lotTest_3ParkingLot.totalSpots = 50;
+		lotTest_3ParkingLot.freeSpots = 11;
+		lotTest_3ParkingLot.peakOccupancy = "11:00am";
+		lotTest_3ParkingLot.peakAvailability = "7:00pm";
+		lotTest_3ParkingLot.address = "Armoury St, Toronto, ON M5G 1R3";
 		lotTest_3ParkingLot.handicap = true;
-		lotTest_3ParkingLot.averageTurnover = "50 mins";
+		lotTest_3ParkingLot.averageTurnover = "70 mins";
+		lotTest_3ParkingLot.open = true;
 		lotTest_3ParkingLot.hours = "open 24/7";
 		lotTest_3ParkingLot.label = "Public parking lot";
+
+		// lotTest_4 (components)
+		const lotTest_4ParkingLot = new ParkingLot(lotTest_4);
+		lotTest_4ParkingLot.totalSpots = 110;
+		lotTest_4ParkingLot.freeSpots = 10;
+		lotTest_4ParkingLot.peakOccupancy = "1:00pm";
+		lotTest_4ParkingLot.peakAvailability = "5:00pm";
+		lotTest_4ParkingLot.address = "75 Elizabeth St, Toronto, ON M5G 1P4";
+		lotTest_4ParkingLot.averageTurnover = "50 mins";
+		lotTest_4ParkingLot.greenP = true;
+		lotTest_4ParkingLot.cost = "20$ / hr";
+		lotTest_4ParkingLot.open = true;
+		lotTest_4ParkingLot.hours = "closes 6:00pm";
+		lotTest_4ParkingLot.label = "Public parking lot";
+
+		// lotTest_5 (components)
+		const lotTest_5ParkingLot = new ParkingLot(lotTest_5);
+		lotTest_5ParkingLot.totalSpots = 25;
+		lotTest_5ParkingLot.peakOccupancy = "3:00pm";
+		lotTest_5ParkingLot.peakAvailability = "9:00am";
+		lotTest_5ParkingLot.address = "306 Yonge St, Toronto, ON M5B 1R4";
+		lotTest_5ParkingLot.averageTurnover = "75 mins";
+		lotTest_5ParkingLot.spotHero = true;
+		lotTest_5ParkingLot.cost = "10$ / hr";
+		lotTest_5ParkingLot.open = true;
+		lotTest_5ParkingLot.hours = "closes 7:00pm";
+		lotTest_5ParkingLot.label = "Public parking lot";
+
+		// lotTest_6 (components)
+		const lotTest_6ParkingLot = new ParkingLot(lotTest_6);
+		lotTest_6ParkingLot.totalSpots = 30;
+		lotTest_6ParkingLot.freeSpots = 5;
+		lotTest_6ParkingLot.peakOccupancy = "7:00pm";
+		lotTest_6ParkingLot.peakAvailability = "11:00am";
+		lotTest_6ParkingLot.address = "306 Yonge St, Toronto, ON M5B 1R4";
+		lotTest_6ParkingLot.handicap = true;
+		lotTest_6ParkingLot.averageTurnover = "30 mins";
+		lotTest_6ParkingLot.open = true;
+		lotTest_6ParkingLot.hours = "closes 9:00pm";
+		lotTest_6ParkingLot.label = "Public parking lot";
+
+		// lotTest_7 (components)
+		const lotTest_7ParkingLot = new ParkingLot(lotTest_7);
+		lotTest_7ParkingLot.totalSpots = 45;
+		lotTest_7ParkingLot.freeSpots = 9;
+		lotTest_7ParkingLot.peakOccupancy = "1:00pm";
+		lotTest_7ParkingLot.peakAvailability = "5:00pm";
+		lotTest_7ParkingLot.address = "306 Yonge St, Toronto, ON M5B 1R4";
+		lotTest_7ParkingLot.averageTurnover = "55 mins";
+		lotTest_7ParkingLot.hours = "holiday hours";
+		lotTest_7ParkingLot.label = "Public parking lot";
+
+		// lotTest_8 (components)
+		const lotTest_8ParkingLot = new ParkingLot(lotTest_8);
+		lotTest_8ParkingLot.totalSpots = 80;
+		lotTest_8ParkingLot.freeSpots = 11;
+		lotTest_8ParkingLot.peakOccupancy = "1:00pm";
+		lotTest_8ParkingLot.peakAvailability = "5:00pm";
+		lotTest_8ParkingLot.address = "570 Bay St., Toronto, ON M5G 0B2";
+		lotTest_8ParkingLot.averageTurnover = "45 mins";
+		lotTest_8ParkingLot.spotHero = true;
+		lotTest_8ParkingLot.cost = "11$ / hr";
+		lotTest_8ParkingLot.open = true;
+		lotTest_8ParkingLot.hours = "open 24/7";
+		lotTest_8ParkingLot.label = "Public parking lot";
+
+		// lotTest_9 (components)
+		const lotTest_9ParkingLot = new ParkingLot(lotTest_9);
+		lotTest_9ParkingLot.totalSpots = 70;
+		lotTest_9ParkingLot.peakOccupancy = "2:30pm";
+		lotTest_9ParkingLot.peakAvailability = "11:00am";
+		lotTest_9ParkingLot.address = "Simpson-Thomson, Toronto, ON M5H 3K5";
+		lotTest_9ParkingLot.handicap = true;
+		lotTest_9ParkingLot.averageTurnover = "80 mins";
+		lotTest_9ParkingLot.greenP = true;
+		lotTest_9ParkingLot.cost = "10$ / hr";
+		lotTest_9ParkingLot.open = true;
+		lotTest_9ParkingLot.hours = "closes 7:00pm";
+		lotTest_9ParkingLot.label = "Public parking lot";
+
+		// lotTest_10 (components)
+		const lotTest_10ParkingLot = new ParkingLot(lotTest_10);
+		lotTest_10ParkingLot.totalSpots = 80;
+		lotTest_10ParkingLot.freeSpots = 4;
+		lotTest_10ParkingLot.peakOccupancy = "3:00pm";
+		lotTest_10ParkingLot.peakAvailability = "5:00pm";
+		lotTest_10ParkingLot.address = "Simpson-Thomson, Toronto, ON M5H 3K5";
+		lotTest_10ParkingLot.averageTurnover = "70 mins";
+		lotTest_10ParkingLot.open = true;
+		lotTest_10ParkingLot.hours = "open 24/7";
+		lotTest_10ParkingLot.label = "Public parking lot";
+
+		// lotTest_11 (components)
+		const lotTest_11ParkingLot = new ParkingLot(lotTest_11);
+		lotTest_11ParkingLot.totalSpots = 150;
+		lotTest_11ParkingLot.freeSpots = 15;
+		lotTest_11ParkingLot.peakOccupancy = "1:00pm";
+		lotTest_11ParkingLot.peakAvailability = "4:00pm";
+		lotTest_11ParkingLot.address = "75 Elizabeth St, Toronto, ON M5G 1P4";
+		lotTest_11ParkingLot.handicap = true;
+		lotTest_11ParkingLot.averageTurnover = "40 mins";
+		lotTest_11ParkingLot.spotHero = true;
+		lotTest_11ParkingLot.cost = "7$ / hr";
+		lotTest_11ParkingLot.open = true;
+		lotTest_11ParkingLot.hours = "open 24/7";
+		lotTest_11ParkingLot.label = "Public parking lot";
+
+		// lotTest_12 (components)
+		const lotTest_12ParkingLot = new ParkingLot(lotTest_12);
+		lotTest_12ParkingLot.totalSpots = 60;
+		lotTest_12ParkingLot.freeSpots = 10;
+		lotTest_12ParkingLot.peakOccupancy = "1:00pm";
+		lotTest_12ParkingLot.peakAvailability = "6:00pm";
+		lotTest_12ParkingLot.address = "570 Bay St., Toronto, ON M5G 0B2";
+		lotTest_12ParkingLot.averageTurnover = "35 mins";
+		lotTest_12ParkingLot.open = true;
+		lotTest_12ParkingLot.hours = "closes 7:00pm";
+		lotTest_12ParkingLot.label = "Public parking lot";
+
+		// lotTest_13 (components)
+		const lotTest_13ParkingLot = new ParkingLot(lotTest_13);
+		lotTest_13ParkingLot.totalSpots = 10;
+		lotTest_13ParkingLot.freeSpots = 2;
+		lotTest_13ParkingLot.peakOccupancy = "7:00pm";
+		lotTest_13ParkingLot.peakAvailability = "3:30pm";
+		lotTest_13ParkingLot.address = "75 Elizabeth St, Toronto, ON M5G 1P4";
+		lotTest_13ParkingLot.handicap = true;
+		lotTest_13ParkingLot.averageTurnover = "15 mins";
+		lotTest_13ParkingLot.spotHero = true;
+		lotTest_13ParkingLot.cost = "10$ / hr";
+		lotTest_13ParkingLot.open = true;
+		lotTest_13ParkingLot.hours = "closes 10:30pm";
+		lotTest_13ParkingLot.label = "Public parking lot";
 
 		// viewDescBar (components)
 		const viewDescBarAlign = new Align(viewDescBar);
@@ -496,13 +782,13 @@ class Map extends Phaser.Scene {
 		const viewLabelAlign = new Align(viewLabel);
 		viewLabelAlign.down = true;
 		viewLabelAlign.center = true;
-		viewLabelAlign.verticalOffset = -302;
+		viewLabelAlign.verticalOffset = -282;
 
 		// viewDesc (components)
 		const viewDescAlign = new Align(viewDesc);
 		viewDescAlign.down = true;
 		viewDescAlign.center = true;
-		viewDescAlign.verticalOffset = -245;
+		viewDescAlign.verticalOffset = -225;
 
 		// bottomBar (components)
 		const bottomBarAlign = new Align(bottomBar);
@@ -608,13 +894,13 @@ class Map extends Phaser.Scene {
 		const occupancy_graphAlign = new Align(occupancy_graph);
 		occupancy_graphAlign.down = true;
 		occupancy_graphAlign.center = true;
-		occupancy_graphAlign.verticalOffset = -374;
+		occupancy_graphAlign.verticalOffset = -354;
 
 		// turnover_graph (components)
 		const turnover_graphAlign = new Align(turnover_graph);
 		turnover_graphAlign.down = true;
 		turnover_graphAlign.center = true;
-		turnover_graphAlign.verticalOffset = -374;
+		turnover_graphAlign.verticalOffset = -354;
 
 		this.mainLayer = mainLayer;
 		this.occupancyHeatmap = occupancyHeatmap;
@@ -743,7 +1029,10 @@ class Map extends Phaser.Scene {
 	/**
 	 * 'occupancy' 'turnover' 'lot' or 'normal'
 	 */
-	mapView = 'normal'
+	mapView = 'normal';
+	occupancyTutorialDone = false;
+	turnoverTutorialDone = false;
+	lotTutorialDone = false;
 
 	preload()
 	{
@@ -764,6 +1053,8 @@ class Map extends Phaser.Scene {
 		{
 			_this.showDialogue();
 		});
+
+		this.showDialogue('Welcome to the Spottr demonstration! This app lets you view data on parking areas throughout supported cities. You can drag to navigate the map, and zoom in or out with the buttons to the left side. Try tapping the buttons on the bottom to change the map view. Tap on this box to continue.');
 
 		this.events.on('textButton', function ()
 		{
@@ -830,8 +1121,9 @@ class Map extends Phaser.Scene {
 			}
 		});
 
-	// TEST: lots
-		this.setLotVisibility(false);
+		this.setLotInfo(false);
+
+		this.setNormalView();
 
 	// SFX
 		this.sound.add('select');
@@ -858,8 +1150,12 @@ class Map extends Phaser.Scene {
 		});
 	}
 
-	showDialogue()
+	showDialogue(dialogue)
 	{
+		console.log(dialogue)
+
+		this.dialogueText.setText(dialogue);
+
 		this.tweens.add
 		({
 			targets: this.dialogueText,
@@ -929,6 +1225,13 @@ class Map extends Phaser.Scene {
 
 		this.searchBarContainer.setVisible(false);
 
+	// tutorial
+		if (!this.occupancyTutorialDone)
+		{
+			this.showDialogue('This is the occupancy view. This is a heatmap overlay which shows which areas are currently busy with lots of occupant parking spaces. It will be difficult to find parking in areas that are seen in red, and easy in areas seen in green.');	
+			this.occupancyTutorialDone = true;
+		}
+
 	}
 
 	setTurnoverView()
@@ -957,6 +1260,13 @@ class Map extends Phaser.Scene {
 		this.setViewLabel(true, 'Turnover view', 'Which areas do people park in for longer');
 
 		this.searchBarContainer.setVisible(false);
+
+	// tutorial
+		if (!this.turnoverTutorialDone)
+		{
+			this.showDialogue('This is the heatmap view for "parking turnover," by which we mean how long on average people stay parked in an area. In areas seen in red, people tend to stay parked for longer. Drivers are more quickly in-and-out for areas in blue, which is often the case for gas stations, etc.');	
+			this.turnoverTutorialDone = true;
+		}
 	}
 
 	setLotView()
@@ -970,7 +1280,7 @@ class Map extends Phaser.Scene {
 	// graph visual
 		this.turnover_graph.setVisible(false);
 		this.occupancy_graph.setVisible(false);
-	
+
 	// button visual
 		this.lot_info_view_icon.setTint(0xFFDD00);
 		this.turnover_view_icon.setTint(0xffffff);
@@ -984,6 +1294,13 @@ class Map extends Phaser.Scene {
 		this.setViewLabel(true, 'Lot view', 'Get info on individual parking lots');
 
 		this.searchBarContainer.setVisible(false);
+
+	// tutorial
+		if (!this.lotTutorialDone)
+		{
+			this.showDialogue('This is the lot view, highlighting individual public parking lots. Tap on one to view specific info, such as the occupancy, hours and more. From there you can open another navigation app to get directions, or reserve a parking spot through Green P or Spot Hero if covered by either.');
+			this.lotTutorialDone = true;
+		}
 	}
 
 	setViewLabel(visible, label, description)

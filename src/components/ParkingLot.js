@@ -84,15 +84,17 @@ class ParkingLot extends UserComponent {
 		{
 			_this.scene.events.emit(_this.eventToEmit);
 
-			_this.gameObject.setAlpha(.7);
+			// _this.gameObject.setAlpha(.2);
+			_this.gameObject.fillAlpha = .2;
 
-			_this.scene.sound.play('select', {volume: .3});
+			// _this.scene.sound.play('select', {volume: .3});
 		});
 
 		this.gameObject.on('pointerout', function (pointer, gameObject)
 			// also catches 'pointerup'
 		{
-			_this.gameObject.setAlpha(1);
+			// _this.gameObject.setAlpha(.5);
+			_this.gameObject.fillAlpha = .5;
 		});
 
 		this.gameObject.on('pointerup', function (pointer, gameObject)

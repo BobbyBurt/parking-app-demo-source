@@ -43,7 +43,7 @@ class Button extends UserComponent {
 		{
 			_this.gameObject.setAlpha(.7);
 
-			_this.scene.sound.play('select', {volume: .3});
+			// _this.scene.sound.play('select', {volume: .3});
 		});
 
 		this.gameObject.on('pointerout', function (pointer, gameObject)
