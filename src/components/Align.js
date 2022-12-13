@@ -57,6 +57,7 @@ class Align extends UserComponent {
 		this.scene.events.on('resize', this.align, this);
 
 		this.align();
+		console.log('align');
 	}
 
 	destroy()
@@ -73,7 +74,6 @@ class Align extends UserComponent {
 
 	// // TEST
 	// 	console.log('aligning');
-	// 	console.log(this.UICam);
 
 		if (this.up)
 		{

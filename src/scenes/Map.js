@@ -1159,7 +1159,7 @@ class Map extends Phaser.Scene {
 		this.tweens.add
 		({
 			targets: this.dialogueText,
-			y: this.dialogueText.originalY - 200,
+			y: this.cameras.main.height / 2,
 			alpha: 1,
 			duration: 700,
 			ease: Phaser.Math.Easing.Quartic.Out
