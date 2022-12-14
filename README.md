@@ -1,6 +1,7 @@
 # Parking App Demo
 
 Design Research - GDES307
+
 Aaron Burt - n01428950
 
 This repository contains the source code for the Spottr app demo. [Try the demo in-browser on any device here.](https://bobbyburt.itch.io/spottr-parking-info-app-demo)
